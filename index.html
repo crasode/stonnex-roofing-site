@@ -1,3 +1,61 @@
+
+
+    <!-- Contact Form -->
+    <div class="reveal" style="max-width:640px;margin:48px auto 0;">
+      <div style="border:1px solid rgba(184,150,90,0.25);background:rgba(184,150,90,0.05);padding:48px 40px;">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--white);text-align:center;margin-bottom:8px;">Send Us a Message</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.5);text-align:center;margin-bottom:32px;font-weight:300;">We'll get back to you within one business day.</p>
+        <form action="https://formsubmit.co/calvin@stonnex.com" method="POST" id="stonnex-contact-form">
+          <input type="hidden" name="_subject" value="New Contact Form Submission - Stonnex.com">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_next" value="https://stonnex.com#contact">
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div>
+              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">First Name *</label>
+              <input type="text" name="first_name" required placeholder="John" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
+            </div>
+            <div>
+              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Last Name *</label>
+              <input type="text" name="last_name" required placeholder="Smith" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div>
+              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Email *</label>
+              <input type="email" name="email" required placeholder="john@example.com" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
+            </div>
+            <div>
+              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Phone</label>
+              <input type="tel" name="phone" placeholder="604-000-0000" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
+            </div>
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Service Needed</label>
+            <select name="service" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;appearance:none;-webkit-appearance:none;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
+              <option value="" style="background:#1e2530;">Select a service...</option>
+              <option value="Roof Replacement" style="background:#1e2530;">Roof Replacement</option>
+              <option value="Roof Repair" style="background:#1e2530;">Roof Repair</option>
+              <option value="Roof Inspection" style="background:#1e2530;">Roof Inspection</option>
+              <option value="Gutter Installation" style="background:#1e2530;">Gutter Installation</option>
+              <option value="Emergency Repair" style="background:#1e2530;">Emergency Repair</option>
+              <option value="Other" style="background:#1e2530;">Other</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom:24px;">
+            <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Message *</label>
+            <textarea name="message" required rows="4" placeholder="Tell us about your project..." style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;resize:vertical;min-height:100px;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'"></textarea>
+          </div>
+
+          <button type="submit" style="width:100%;padding:16px;background:var(--gold);color:var(--white);border:none;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#b8965a'" onmouseout="this.style.background='var(--gold)'">Send Message</button>
+        </form>
+      </div>
+    </div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +63,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="/hero-bg.jpg" as="image" fetchpriority="high">
 
-<!-- ═══ SEO: Title & Core Meta ═══ -->
+<!-- âââ SEO: Title & Core Meta âââ -->
 <title>Roof Replacement Vancouver &amp; Lower Mainland | Stonnex Roofing Contractor BC</title>
-<meta name="description" content="Licensed roofing contractor serving Vancouver and the Lower Mainland. Roof replacement, storm damage repair &amp; free on-site inspections. WorkSafeBC registered · $5M insured · SkilledTradesBC certified.">
+<meta name="description" content="Licensed roofing contractor serving Vancouver and the Lower Mainland. Roof replacement, storm damage repair &amp; free on-site inspections. WorkSafeBC registered Â· $5M insured Â· SkilledTradesBC certified.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.stonnex.com/">
 
-<!-- ═══ SEO: Open Graph ═══ -->
+<!-- âââ SEO: Open Graph âââ -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.stonnex.com/">
 <meta property="og:title" content="Stonnex | Roofing Contractor Vancouver &amp; Lower Mainland BC">
@@ -19,12 +77,12 @@
 <meta property="og:locale" content="en_CA">
 <meta property="og:site_name" content="Stonnex Roofing">
 
-<!-- ═══ SEO: Twitter Card ═══ -->
+<!-- âââ SEO: Twitter Card âââ -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Stonnex | Roofing Contractor Vancouver &amp; Lower Mainland BC">
 <meta name="twitter:description" content="Licensed residential roofing contractor serving Vancouver and the Lower Mainland. Free roof inspections. WorkSafeBC registered.">
 
-<!-- ═══ SEO: LocalBusiness + RoofingContractor Schema ═══ -->
+<!-- âââ SEO: LocalBusiness + RoofingContractor Schema âââ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -104,13 +162,13 @@
       "@type": "Review",
       "author": {"@type": "Person", "name": "Margaret T."},
       "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "The team replaced our cedar shake roof on our Lynn Valley home — the whole process from initial inspection to the final walk-around was professional in a way I haven't experienced with any other contractor. No surprises on the final bill."
+      "reviewBody": "The team replaced our cedar shake roof on our Lynn Valley home â the whole process from initial inspection to the final walk-around was professional in a way I haven't experienced with any other contractor. No surprises on the final bill."
     },
     {
       "@type": "Review",
       "author": {"@type": "Person", "name": "Robert H."},
       "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Stonnex was the only company that gave us a fully itemised written scope — every material listed, fixed price, no surprises. Their warranty documentation made our insurance broker very happy."
+      "reviewBody": "Stonnex was the only company that gave us a fully itemised written scope â every material listed, fixed price, no surprises. Their warranty documentation made our insurance broker very happy."
     },
     {
       "@type": "Review",
@@ -122,12 +180,12 @@
 }
 </script>
 
-<!-- ═══ SEO: Service Schema ═══ -->
+<!-- âââ SEO: Service Schema âââ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Roofing Services — Stonnex Lower Mainland BC",
+  "name": "Roofing Services â Stonnex Lower Mainland BC",
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -135,7 +193,7 @@
       "item": {
         "@type": "Service",
         "name": "Roof Replacement Vancouver",
-        "description": "Full residential roof replacements in Vancouver and the Lower Mainland. Cedar shake, architectural asphalt shingle, standing seam metal, and slate — all installed by SkilledTradesBC certified roofers under WorkSafeBC registration.",
+        "description": "Full residential roof replacements in Vancouver and the Lower Mainland. Cedar shake, architectural asphalt shingle, standing seam metal, and slate â all installed by SkilledTradesBC certified roofers under WorkSafeBC registration.",
         "provider": {"@type": "LocalBusiness", "name": "Stonnex Roofing"},
         "areaServed": "Lower Mainland, BC",
         "url": "https://www.stonnex.com/#services"
@@ -181,7 +239,7 @@
 }
 </script>
 
-<!-- ═══ SEO: BreadcrumbList ═══ -->
+<!-- âââ SEO: BreadcrumbList âââ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -197,7 +255,7 @@
 }
 </script>
 
-<!-- ═══ SEO: FAQPage Schema (featured snippets) ═══ -->
+<!-- âââ SEO: FAQPage Schema (featured snippets) âââ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -216,7 +274,7 @@
       "name": "Do you offer free roof inspections in the Lower Mainland?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Every Stonnex project begins with a complimentary on-site roof inspection. We also offer instant estimates through our website — no obligation, no pressure."
+        "text": "Yes. Every Stonnex project begins with a complimentary on-site roof inspection. We also offer instant estimates through our website â no obligation, no pressure."
       }
     },
     {
@@ -286,7 +344,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ─── NAVIGATION ─── */
+  /* âââ NAVIGATION âââ */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -356,7 +414,7 @@
 
   .nav-cta:hover { background: var(--slate) !important; color: var(--white) !important; }
 
-  /* ─── HERO ─── */
+  /* âââ HERO âââ */
   .hero {
     position: relative;
     height: 100vh;
@@ -565,7 +623,7 @@
     letter-spacing: 0.02em;
   }
 
-  /* ─── SECTION UTILS ─── */
+  /* âââ SECTION UTILS âââ */
   section { position: relative; }
 
   .container {
@@ -610,7 +668,7 @@
     color: var(--gold);
   }
 
-  /* ─── WHY STONNEX (INTRO) ─── */
+  /* âââ WHY STONNEX (INTRO) âââ */
   .intro-section {
     padding: 100px 0;
     background: var(--cream);
@@ -707,7 +765,7 @@
     line-height: 1.4;
   }
 
-  /* ─── SERVICES ─── */
+  /* âââ SERVICES âââ */
   .services-section {
     padding: 100px 0;
     background: var(--cream);
@@ -793,7 +851,7 @@
 
   .service-card:hover .service-link { color: var(--gold); gap: 14px; }
 
-  /* ─── PROCESS ─── */
+  /* âââ PROCESS âââ */
   .process-section {
     padding: 100px 0;
     background: var(--slate);
@@ -871,7 +929,7 @@
     font-weight: 300;
   }
 
-  /* ─── CREDENTIALS / TRUST WALL ─── */
+  /* âââ CREDENTIALS / TRUST WALL âââ */
   .credentials-section {
     padding: 100px 0;
     background: var(--white);
@@ -930,7 +988,7 @@
     font-weight: 300;
   }
 
-  /* ─── TESTIMONIALS ─── */
+  /* âââ TESTIMONIALS âââ */
   .testimonials-section {
     padding: 100px 0;
     background: var(--cream);
@@ -1034,7 +1092,7 @@
     border-radius: 2px;
   }
 
-  /* ─── SERVICE AREAS ─── */
+  /* âââ SERVICE AREAS âââ */
   .areas-section {
     padding: 80px 0;
     background: var(--slate);
@@ -1097,7 +1155,7 @@
     text-decoration: none;
   }
 
-  /* ─── CTA SECTION ─── */
+  /* âââ CTA SECTION âââ */
   .cta-section {
     padding: 100px 0;
     background: linear-gradient(135deg, #1a2028 0%, #1e2d20 40%, #1a2028 100%);
@@ -1182,7 +1240,7 @@
     color: rgba(255,255,255,0.45);
   }
 
-  /* ─── PHONE CTA FLOATING ─── */
+  /* âââ PHONE CTA FLOATING âââ */
   .phone-strip {
     background: var(--slate);
     border-top: 3px solid var(--gold);
@@ -1213,7 +1271,7 @@
 
   .phone-strip a:hover { opacity: 0.8; }
 
-  /* ─── FOOTER ─── */
+  /* âââ FOOTER âââ */
   footer {
     background: #16202a;
     padding: 80px 0 0;
@@ -1290,7 +1348,7 @@
 
   .footer-bottom-links a:hover { color: var(--gold); }
 
-  /* ─── COMMERCIAL BANNER ─── */
+  /* âââ COMMERCIAL BANNER âââ */
   .commercial-banner {
     margin-top: 2px;
     background: var(--slate);
@@ -1356,7 +1414,7 @@
 
 
 
-  /* ─── GALLERY ─── */
+  /* âââ GALLERY âââ */
   .gallery-section {
     padding: 100px 0;
     background: var(--white);
@@ -1429,7 +1487,7 @@
   .gallery-placeholder svg { color: rgba(184,150,90,0.4); }
   .gallery-placeholder span { font-size: 11px; letter-spacing: 0.1em; color: var(--text-light); text-transform: uppercase; }
 
-  /* ─── QUOTE FORM ─── */
+  /* âââ QUOTE FORM âââ */
   .quote-section {
     padding: 100px 0;
     background: var(--slate);
@@ -1693,7 +1751,7 @@
     .commercial-banner-text { padding: 48px 28px; }
   }
 
-  /* ─── STICKY CALL BUTTON ─── */
+  /* âââ STICKY CALL BUTTON âââ */
   .sticky-cta {
     position: fixed;
     bottom: 32px;
@@ -1724,7 +1782,7 @@
     box-shadow: 0 12px 40px rgba(184,150,90,0.5);
   }
 
-  /* ─── ANIMATIONS ─── */
+  /* âââ ANIMATIONS âââ */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(28px); }
     to { opacity: 1; transform: translateY(0); }
@@ -1741,7 +1799,7 @@
     transform: translateY(0);
   }
 
-  /* ─── MOBILE ─── */
+  /* âââ MOBILE âââ */
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-links { display: none; }
@@ -1780,7 +1838,7 @@
     .cta-form button { width: 100%; }
   }
 
-  /* ─── GALLERY CSS PHOTOS ─── */
+  /* âââ GALLERY CSS PHOTOS âââ */
   .gphoto {
     width: 100%; height: 100%;
     position: relative;
@@ -1790,28 +1848,28 @@
   }
 
 
-  /* Cedar shake — warm brown wood tones */
+  /* Cedar shake â warm brown wood tones */
 
 
 
-  /* Standing seam metal — dark charcoal with crisp seams */
+  /* Standing seam metal â dark charcoal with crisp seams */
 
 
 
 
-  /* Architectural shingle — dimensional shadow lines */
+  /* Architectural shingle â dimensional shadow lines */
 
 
 
-  /* Flat membrane — clean, smooth */
+  /* Flat membrane â clean, smooth */
 
 
 
-  /* Luxury home — warm exterior tones */
+  /* Luxury home â warm exterior tones */
 
 
 
-  /* ─── PARTNERS ─── */
+  /* âââ PARTNERS âââ */
   .partners-section {
     padding: 72px 0;
     background: var(--white);
@@ -1942,13 +2000,13 @@
   <div class="hero-content">
     <div class="hero-eyebrow">
       <div class="hero-eyebrow-line"></div>
-      <span>Lower Mainland · BC</span>
+      <span>Lower Mainland Â· BC</span>
     </div>
     <h1 class="hero-title">
       Roofing Crafted<br>for <em>Exceptional</em><br>Homes.
     </h1>
     <p class="hero-subtitle">
-      Expert roof replacements, repairs, and free inspections for homeowners across Vancouver and the Lower Mainland. Fully certified, fully insured — backed by written warranties on every project.
+      Expert roof replacements, repairs, and free inspections for homeowners across Vancouver and the Lower Mainland. Fully certified, fully insured â backed by written warranties on every project.
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">
@@ -2002,7 +2060,7 @@
   <div style="text-align:center;padding:0 24px 40px;">
     <p style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#c9a96e;font-family:'Inter',sans-serif;font-weight:600;margin:0 0 14px;">Instant Roof Quote</p>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.8vw,50px);font-weight:300;line-height:1.15;color:#1e2530;margin:0 0 16px;">Free Roof Inspection.<br><em>Instant Estimate, No Obligation.</em></h2>
-    <p style="font-size:16px;color:#6b7280;max-width:520px;margin:0 auto;font-weight:300;line-height:1.8;font-family:'Inter',sans-serif;">Every project begins with a complimentary on-site inspection. Get your instant estimate below — no pressure, no commitment.</p>
+    <p style="font-size:16px;color:#6b7280;max-width:520px;margin:0 auto;font-weight:300;line-height:1.8;font-family:'Inter',sans-serif;">Every project begins with a complimentary on-site inspection. Get your instant estimate below â no pressure, no commitment.</p>
   </div>
   <script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=BcZ84ee4Bj5-sAtZot4pJ" async></script>
 </section>
@@ -2017,14 +2075,14 @@
           <span>Why Stonnex</span>
         </div>
         <h2 class="section-title">Your Home Deserves<br><em>More</em> Than a Roofer.</h2>
-        <p>In the Lower Mainland, your roof faces over 1,200mm of annual rainfall, coastal salt air, and unpredictable winter loads. Not every roofing company is equipped to handle it — and fewer still understand what discerning BC homeowners expect.</p>
-        <p>Stonnex was built differently. We combine the craftsmanship standards of fine home construction with the rigour of full commercial certification. Every project is overseen from first inspection to final warranty document by a named project manager — not a call centre.</p>
-        <p>We work by appointment, never under pressure, and always within a clearly written scope. When we leave your property, you'll have a roof that performs — and the documentation to prove every step was done right.</p>
+        <p>In the Lower Mainland, your roof faces over 1,200mm of annual rainfall, coastal salt air, and unpredictable winter loads. Not every roofing company is equipped to handle it â and fewer still understand what discerning BC homeowners expect.</p>
+        <p>Stonnex was built differently. We combine the craftsmanship standards of fine home construction with the rigour of full commercial certification. Every project is overseen from first inspection to final warranty document by a named project manager â not a call centre.</p>
+        <p>We work by appointment, never under pressure, and always within a clearly written scope. When we leave your property, you'll have a roof that performs â and the documentation to prove every step was done right.</p>
       </div>
       <div class="reveal">
         <div class="intro-photo-wrap" style="margin-bottom:32px;">
           <img src="/img-1.jpg" alt="Stonnex roof replacement project Lower Mainland BC" alt="Aerial view of luxury home with completed Stonnex roof installation" loading="eager" style="border-radius:2px;">
-          <img loading="lazy" src="/img-2.jpg" alt="Residential roof installation Vancouver BC by Stonnex" alt="Exceptional Lower Mainland home — Stonnex Roofing">
+          <img loading="lazy" src="/img-2.jpg" alt="Residential roof installation Vancouver BC by Stonnex" alt="Exceptional Lower Mainland home â Stonnex Roofing">
           <div class="intro-photo-caption">Roofing crafted for exceptional Lower Mainland homes</div>
         </div>
         <div class="intro-stats">
@@ -2034,7 +2092,7 @@
           </div>
           <div class="stat-card">
             <div class="stat-number">100<span>%</span></div>
-            <div class="stat-label">Fixed-Price Quotes — No Surprises</div>
+            <div class="stat-label">Fixed-Price Quotes â No Surprises</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">25<span>yr</span></div>
@@ -2042,7 +2100,7 @@
           </div>
           <div class="stat-card">
             <div class="stat-number">50<span>yr</span></div>
-            <div class="stat-label">Material Warranty — Select Products</div>
+            <div class="stat-label">Material Warranty â Select Products</div>
           </div>
         </div>
       </div>
@@ -2067,8 +2125,8 @@
     <div class="services-grid">
       <div class="service-card reveal">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        <h3 class="service-title">Residential Roofing — Vancouver &amp; Lower Mainland BC</h3>
-        <p class="service-desc">Full roof replacements and new installations for single-family homes, custom builds, and luxury residences. Cedar shake, standing seam metal, architectural asphalt, and slate profiles — all suited to BC's coastal climate.</p>
+        <h3 class="service-title">Residential Roofing â Vancouver &amp; Lower Mainland BC</h3>
+        <p class="service-desc">Full roof replacements and new installations for single-family homes, custom builds, and luxury residences. Cedar shake, standing seam metal, architectural asphalt, and slate profiles â all suited to BC's coastal climate.</p>
         <a href="#contact" class="service-link">
           Get a Quote
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -2077,8 +2135,8 @@
 
       <div class="service-card reveal">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-        <h3 class="service-title">Roof Repair &amp; Maintenance — Lower Mainland</h3>
-        <p class="service-desc">Emergency leak response and preventive maintenance programs. We identify the root cause — not just the symptom — and repair it once, with documented workmanship backing every fix.</p>
+        <h3 class="service-title">Roof Repair &amp; Maintenance â Lower Mainland</h3>
+        <p class="service-desc">Emergency leak response and preventive maintenance programs. We identify the root cause â not just the symptom â and repair it once, with documented workmanship backing every fix.</p>
         <a href="#contact" class="service-link">
           Book Inspection
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -2088,7 +2146,7 @@
       <div class="service-card reveal">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <h3 class="service-title">Flat Roof &amp; Torch-On Membrane Replacement BC</h3>
-        <p class="service-desc">Specialised flat and low-slope roofing for modern West Coast architecture, coach houses, and secondary suites. Fully waterproofed membrane systems with extended manufacturer coverage — the right solution for BC's relentless rainfall.</p>
+        <p class="service-desc">Specialised flat and low-slope roofing for modern West Coast architecture, coach houses, and secondary suites. Fully waterproofed membrane systems with extended manufacturer coverage â the right solution for BC's relentless rainfall.</p>
         <a href="#contact" class="service-link">
           Learn More
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -2107,8 +2165,8 @@
 
       <div class="service-card reveal">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
-        <h3 class="service-title">Gutter Installation &amp; Drainage — Lower Mainland</h3>
-        <p class="service-desc">Seamless aluminum gutters, downspout systems, and perimeter drainage solutions designed for BC rainfall volumes. We engineer the full water management system — from fascia to foundation.</p>
+        <h3 class="service-title">Gutter Installation &amp; Drainage â Lower Mainland</h3>
+        <p class="service-desc">Seamless aluminum gutters, downspout systems, and perimeter drainage solutions designed for BC rainfall volumes. We engineer the full water management system â from fascia to foundation.</p>
         <a href="#contact" class="service-link">
           Get a Quote
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -2127,7 +2185,7 @@
     </div>
 
     
-    <!-- PHOTO STRIP — Roof Types Showcase -->
+    <!-- PHOTO STRIP â Roof Types Showcase -->
     <div class="reveal" style="margin-top:60px;margin-bottom:0;">
       <p style="font-size:12px;color:var(--text-light);letter-spacing:0.06em;text-transform:uppercase;text-align:center;margin-bottom:14px;">Shingle &amp; metal installations across the Lower Mainland</p>
       <div class="sn-photo-strip" style="display:grid;grid-template-columns:1fr 1fr;gap:3px;overflow:hidden;border-radius:2px;max-width:900px;margin:0 auto;">
@@ -2151,7 +2209,7 @@
             <span>Commercial &amp; Strata Roofing</span>
           </div>
           <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,48px);font-weight:300;color:var(--white);line-height:1.1;">Strata, Multi-Family &amp;<br><em style="color:var(--gold-light);">Commercial Buildings</em></h3>
-          <p style="font-size:16px;line-height:1.85;color:rgba(255,255,255,0.65);font-weight:300;max-width:500px;margin-top:18px;">Stonnex works directly with strata councils, property managers, and building owners across the Lower Mainland. We understand the unique demands of managed buildings — AGM timelines, depreciation report requirements, insurance renewals, and the need to keep residents informed throughout. We handle the coordination so you don't have to.</p>
+          <p style="font-size:16px;line-height:1.85;color:rgba(255,255,255,0.65);font-weight:300;max-width:500px;margin-top:18px;">Stonnex works directly with strata councils, property managers, and building owners across the Lower Mainland. We understand the unique demands of managed buildings â AGM timelines, depreciation report requirements, insurance renewals, and the need to keep residents informed throughout. We handle the coordination so you don't have to.</p>
           <ul class="commercial-features">
             <li>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -2188,7 +2246,7 @@
     </div>
 
     <div class="reveal" style="margin-top:0;overflow:hidden;">
-      <img loading="lazy" src="/img-5.jpg" alt="Completed roof replacement West Vancouver by Stonnex" alt="Commercial roofing installation — aerial view" style="width:100%;height:380px;object-fit:cover;object-position:center 25%;display:block;">
+      <img loading="lazy" src="/img-5.jpg" alt="Completed roof replacement West Vancouver by Stonnex" alt="Commercial roofing installation â aerial view" style="width:100%;height:380px;object-fit:cover;object-position:center 25%;display:block;">
     </div>
   </div>
 </section>
@@ -2209,7 +2267,7 @@
       <div class="step reveal">
         <div class="step-number"><span>01</span></div>
         <h3 class="step-title">Free Inspection</h3>
-        <p class="step-desc">A certified inspector assesses your roof, photographs all problem areas, and delivers a written report — no cost, no obligation.</p>
+        <p class="step-desc">A certified inspector assesses your roof, photographs all problem areas, and delivers a written report â no cost, no obligation.</p>
       </div>
       <div class="step reveal">
         <div class="step-number"><span>02</span></div>
@@ -2224,7 +2282,7 @@
       <div class="step reveal">
         <div class="step-number"><span>04</span></div>
         <h3 class="step-title">Warranty & Follow-Up</h3>
-        <p class="step-desc">Full warranty documentation, a final walkthrough with you, and a 12-month check-in call. Your investment is protected — and so is our relationship.</p>
+        <p class="step-desc">Full warranty documentation, a final walkthrough with you, and a 12-month check-in call. Your investment is protected â and so is our relationship.</p>
       </div>
     </div>
   </div>
@@ -2236,7 +2294,7 @@
       <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(15,20,28,0.78) 0%,rgba(15,20,28,0.35) 60%,transparent 100%);">
         <div style="position:absolute;top:50%;left:5%;transform:translateY(-50%);max-width:380px;padding:0 16px;">
           <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.2vw,40px);font-weight:300;color:#ffffff;line-height:1.2;margin-bottom:14px;text-shadow:0 1px 6px rgba(0,0,0,0.4);">Precision at every stage<br><em style="color:#c49a58;">of the installation</em></p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.85);font-weight:300;letter-spacing:0.04em;line-height:1.7;text-shadow:0 1px 4px rgba(0,0,0,0.5);">From substrate inspection to final course — every step documented and overseen by a certified lead roofer.</p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.85);font-weight:300;letter-spacing:0.04em;line-height:1.7;text-shadow:0 1px 4px rgba(0,0,0,0.5);">From substrate inspection to final course â every step documented and overseen by a certified lead roofer.</p>
         </div>
       </div>
     </div>
@@ -2251,8 +2309,8 @@
         <div class="section-eyebrow-line"></div>
         <span>Why Choose Stonnex</span>
       </div>
-      <h2 class="section-title">What Sets Us Apart —<br><em>And Protects You</em></h2>
-      <p style="font-size:17px;line-height:1.85;color:var(--text-mid);max-width:600px;margin-top:20px;font-weight:300;">Most homeowners only discover what their roofer <em>didn't</em> have after something goes wrong. Here is exactly what Stonnex carries on every project — and what each one means for your home, your warranty, and your peace of mind.</p>
+      <h2 class="section-title">What Sets Us Apart â<br><em>And Protects You</em></h2>
+      <p style="font-size:17px;line-height:1.85;color:var(--text-mid);max-width:600px;margin-top:20px;font-weight:300;">Most homeowners only discover what their roofer <em>didn't</em> have after something goes wrong. Here is exactly what Stonnex carries on every project â and what each one means for your home, your warranty, and your peace of mind.</p>
     </div>
 
     <div class="credentials-grid reveal">
@@ -2263,7 +2321,7 @@
         </div>
         <div>
           <div class="credential-title">WorkSafeBC Registered Employer</div>
-          <div class="credential-desc">Every Stonnex project carries active WorkSafeBC clearance — meaning our workers are fully covered and you face zero liability if an injury occurs on your property. You can verify our standing at worksafebc.com before we start a single nail. Contractors without this leave homeowners legally exposed.</div>
+          <div class="credential-desc">Every Stonnex project carries active WorkSafeBC clearance â meaning our workers are fully covered and you face zero liability if an injury occurs on your property. You can verify our standing at worksafebc.com before we start a single nail. Contractors without this leave homeowners legally exposed.</div>
         </div>
       </div>
 
@@ -2273,7 +2331,7 @@
         </div>
         <div>
           <div class="credential-title">$5,000,000 Commercial General Liability</div>
-          <div class="credential-desc">Our CGL policy covers property damage, bodily injury, and consequential damage for the full duration of every project. We provide the certificate of insurance before work begins — always. Many roofers carry minimal or no coverage; if something goes wrong, you pay. With Stonnex, you never have to find out the hard way.</div>
+          <div class="credential-desc">Our CGL policy covers property damage, bodily injury, and consequential damage for the full duration of every project. We provide the certificate of insurance before work begins â always. Many roofers carry minimal or no coverage; if something goes wrong, you pay. With Stonnex, you never have to find out the hard way.</div>
         </div>
       </div>
 
@@ -2283,7 +2341,7 @@
         </div>
         <div>
           <div class="credential-title">SkilledTradesBC Certified</div>
-          <div class="credential-desc">Every Stonnex project is led by a SkilledTradesBC certified roofer — the provincial standard of excellence for trades in BC. Our lead roofers are formally qualified tradespeople who supervise and take full responsibility for every installation from start to finish.</div>
+          <div class="credential-desc">Every Stonnex project is led by a SkilledTradesBC certified roofer â the provincial standard of excellence for trades in BC. Our lead roofers are formally qualified tradespeople who supervise and take full responsibility for every installation from start to finish.</div>
         </div>
       </div>
 
@@ -2293,7 +2351,7 @@
         </div>
         <div>
           <div class="credential-title">Licensed BC Contractor &amp; Bonded</div>
-          <div class="credential-desc">Stonnex holds an active BC business licence and contractor registration. Our bonding means that if we ever fail to complete a contracted scope, you have legal financial recourse. This is the baseline every homeowner should require — and most never ask for. We offer it upfront.</div>
+          <div class="credential-desc">Stonnex holds an active BC business licence and contractor registration. Our bonding means that if we ever fail to complete a contracted scope, you have legal financial recourse. This is the baseline every homeowner should require â and most never ask for. We offer it upfront.</div>
         </div>
       </div>
 
@@ -2302,8 +2360,8 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><polyline points="9 11 12 14 22 4"/></svg>
         </div>
         <div>
-          <div class="credential-title">BC Building Code Compliance — All Projects</div>
-          <div class="credential-desc">Every installation meets or exceeds the BC Building Code and applicable municipal requirements. Where permits are required, we pull them — we never ask you to. Code-compliant work protects your home's resale value, your insurance coverage, and your family's safety. Non-compliant work voids both.</div>
+          <div class="credential-title">BC Building Code Compliance â All Projects</div>
+          <div class="credential-desc">Every installation meets or exceeds the BC Building Code and applicable municipal requirements. Where permits are required, we pull them â we never ask you to. Code-compliant work protects your home's resale value, your insurance coverage, and your family's safety. Non-compliant work voids both.</div>
         </div>
       </div>
 
@@ -2312,7 +2370,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
         <div>
-          <div class="credential-title">Written Warranty — Labour &amp; Materials</div>
+          <div class="credential-title">Written Warranty â Labour &amp; Materials</div>
           <div class="credential-desc">Every Stonnex project is backed by a written workmanship warranty covering our labour, plus manufacturer warranties on all materials. You receive both documents at project completion, in plain language, with clear terms. Verbal promises from a contractor mean nothing. Written warranties do.</div>
         </div>
       </div>
@@ -2322,8 +2380,8 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
         </div>
         <div>
-          <div class="credential-title">Itemised Written Quotes — Fixed Price</div>
-          <div class="credential-desc">Our quotes list every material, every labour item, and every cost. The price you sign is the price you pay — no change orders for things we missed during our own inspection, no hidden fees on completion. We have never once billed a client more than the signed contract. That record matters to us.</div>
+          <div class="credential-title">Itemised Written Quotes â Fixed Price</div>
+          <div class="credential-desc">Our quotes list every material, every labour item, and every cost. The price you sign is the price you pay â no change orders for things we missed during our own inspection, no hidden fees on completion. We have never once billed a client more than the signed contract. That record matters to us.</div>
         </div>
       </div>
 
@@ -2333,7 +2391,7 @@
         </div>
         <div>
           <div class="credential-title">Manufacturer-Approved Materials Only</div>
-          <div class="credential-desc">We install only from approved manufacturer product lines — Owens Corning, IKO, Malarkey, and others appropriate to each application. No off-brand substitutions, no grey-market imports. The materials we specify in your quote are the materials we install. You can check the delivery receipts yourself.</div>
+          <div class="credential-desc">We install only from approved manufacturer product lines â Owens Corning, IKO, Malarkey, and others appropriate to each application. No off-brand substitutions, no grey-market imports. The materials we specify in your quote are the materials we install. You can check the delivery receipts yourself.</div>
         </div>
       </div>
 
@@ -2342,7 +2400,7 @@
 </section>
 
 
-<!-- FAQ SECTION — SEO -->
+<!-- FAQ SECTION â SEO -->
 <section style="background:#faf8f4;padding:96px 0 88px;" id="faq">
   <div class="container">
     <div style="max-width:760px;margin:0 auto;">
@@ -2360,7 +2418,7 @@
             <span style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:#1e2530;line-height:1.3;">How much does a roof replacement cost in Vancouver BC?</span>
             <span style="flex-shrink:0;font-size:20px;color:#a0793d;font-weight:300;">+</span>
           </summary>
-          <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.8;color:#4a4a4a;margin-top:16px;padding-right:32px;">A residential roof replacement in Vancouver and the Lower Mainland typically costs between $8,000 and $25,000 CAD depending on roof size, slope, material type, and complexity. Stonnex provides a complimentary on-site inspection and a written fixed-price quote — no hidden fees, no surprises on the final invoice. You can also get an instant online estimate through our website.</p>
+          <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.8;color:#4a4a4a;margin-top:16px;padding-right:32px;">A residential roof replacement in Vancouver and the Lower Mainland typically costs between $8,000 and $25,000 CAD depending on roof size, slope, material type, and complexity. Stonnex provides a complimentary on-site inspection and a written fixed-price quote â no hidden fees, no surprises on the final invoice. You can also get an instant online estimate through our website.</p>
         </details>
 
         <details style="border-bottom:1px solid #e5ddd0;padding:24px 0;">
@@ -2368,7 +2426,7 @@
             <span style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:#1e2530;line-height:1.3;">Do you offer free roof inspections in the Lower Mainland?</span>
             <span style="flex-shrink:0;font-size:20px;color:#a0793d;font-weight:300;">+</span>
           </summary>
-          <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.8;color:#4a4a4a;margin-top:16px;padding-right:32px;">Yes. Every Stonnex project begins with a complimentary on-site roof inspection across the entire Lower Mainland — Vancouver, Burnaby, North Vancouver, West Vancouver, Surrey, Langley, and all surrounding areas. We also offer instant estimates through our website via the Roofle tool. No obligation. No pressure.</p>
+          <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.8;color:#4a4a4a;margin-top:16px;padding-right:32px;">Yes. Every Stonnex project begins with a complimentary on-site roof inspection across the entire Lower Mainland â Vancouver, Burnaby, North Vancouver, West Vancouver, Surrey, Langley, and all surrounding areas. We also offer instant estimates through our website via the Roofle tool. No obligation. No pressure.</p>
         </details>
 
         <details style="border-bottom:1px solid #e5ddd0;padding:24px 0;">
@@ -2400,7 +2458,7 @@
             <span style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:#1e2530;line-height:1.3;">What areas of the Lower Mainland do you serve?</span>
             <span style="flex-shrink:0;font-size:20px;color:#a0793d;font-weight:300;">+</span>
           </summary>
-          <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.8;color:#4a4a4a;margin-top:16px;padding-right:32px;">Stonnex serves homeowners across the entire Lower Mainland — Vancouver, Burnaby, North Vancouver, West Vancouver, Surrey, Langley, Richmond, Coquitlam, Port Coquitlam, Delta, New Westminster, Maple Ridge, Abbotsford, and Chilliwack. Same certified crew, same fixed-price quotes, same response time across all areas.</p>
+          <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.8;color:#4a4a4a;margin-top:16px;padding-right:32px;">Stonnex serves homeowners across the entire Lower Mainland â Vancouver, Burnaby, North Vancouver, West Vancouver, Surrey, Langley, Richmond, Coquitlam, Port Coquitlam, Delta, New Westminster, Maple Ridge, Abbotsford, and Chilliwack. Same certified crew, same fixed-price quotes, same response time across all areas.</p>
         </details>
 
       </div>
@@ -2436,9 +2494,9 @@
       <div class="testimonial-card reveal">
         <span class="testimonial-verified">Verified Google</span>
         <div class="testimonial-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          <span class="star">â</span><span class="star">â</span><span class="star">â</span><span class="star">â</span><span class="star">â</span>
         </div>
-        <p class="testimonial-quote">"The team replaced our cedar shake roof on our Lynn Valley home — the whole process from initial inspection to the final walk-around was professional in a way I haven't experienced with any other contractor. No surprises on the final bill. The roof looks incredible."</p>
+        <p class="testimonial-quote">"The team replaced our cedar shake roof on our Lynn Valley home â the whole process from initial inspection to the final walk-around was professional in a way I haven't experienced with any other contractor. No surprises on the final bill. The roof looks incredible."</p>
         <div class="testimonial-author">
           <div class="author-avatar">M</div>
           <div>
@@ -2451,9 +2509,9 @@
       <div class="testimonial-card reveal">
         <span class="testimonial-verified">Verified Google</span>
         <div class="testimonial-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          <span class="star">â</span><span class="star">â</span><span class="star">â</span><span class="star">â</span><span class="star">â</span>
         </div>
-        <p class="testimonial-quote">"We had three companies quote our roof replacement in West Van. Stonnex was the only one that gave us a fully itemised written scope — every material listed, fixed price, no surprises. Their warranty documentation made our insurance broker very happy. The work itself was flawless and done in two days."</p>
+        <p class="testimonial-quote">"We had three companies quote our roof replacement in West Van. Stonnex was the only one that gave us a fully itemised written scope â every material listed, fixed price, no surprises. Their warranty documentation made our insurance broker very happy. The work itself was flawless and done in two days."</p>
         <div class="testimonial-author">
           <div class="author-avatar">R</div>
           <div>
@@ -2466,7 +2524,7 @@
       <div class="testimonial-card reveal">
         <span class="testimonial-verified">Verified Google</span>
         <div class="testimonial-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          <span class="star">â</span><span class="star">â</span><span class="star">â</span><span class="star">â</span><span class="star">â</span>
         </div>
         <p class="testimonial-quote">"I manage three properties in Burnaby and Coquitlam. Stonnex handles all three now. They show up when they say, send me a written report after every maintenance visit, and their crew treats my tenants' homes with respect. I won't use anyone else."</p>
         <div class="testimonial-author">
@@ -2490,7 +2548,7 @@
         <span>Trusted Supply Partners</span>
         <div class="section-eyebrow-line"></div>
       </div>
-      <p class="partners-subtitle">We source exclusively from established BC and national roofing suppliers — so you know exactly what's going on your home.</p>
+      <p class="partners-subtitle">We source exclusively from established BC and national roofing suppliers â so you know exactly what's going on your home.</p>
     </div>
     <div class="partners-logos reveal">
       <div class="partner-logo">
@@ -2526,7 +2584,7 @@
           <span>Service Areas</span>
         </div>
         <h2 class="section-title light">Proudly Serving<br><em>the Lower Mainland</em></h2>
-        <p>Our teams serve homeowners across the entire Lower Mainland and Fraser Valley — from West Vancouver to Chilliwack. Same certified crew, same fixed-price quotes, same response time — wherever your property is in BC.</p>
+        <p>Our teams serve homeowners across the entire Lower Mainland and Fraser Valley â from West Vancouver to Chilliwack. Same certified crew, same fixed-price quotes, same response time â wherever your property is in BC.</p>
         <a href="#contact" class="btn-primary" style="margin-top:36px;display:inline-flex;">Check My Area</a>
       </div>
       <div class="areas-list reveal">
@@ -2561,28 +2619,28 @@
     </div>
     <div class="gallery-grid reveal">
       <div class="gallery-item" style="grid-row:span 2;">
-        <img src="/img-10.jpg" alt="Roof replacement Surrey BC by Stonnex" alt="Modern Standing Seam Metal Roof — West Vancouver" loading="lazy">
-        <div class="gallery-item-label"><span>Modern Standing Seam Metal Roof — West Vancouver</span></div>
+        <img src="/img-10.jpg" alt="Roof replacement Surrey BC by Stonnex" alt="Modern Standing Seam Metal Roof â West Vancouver" loading="lazy">
+        <div class="gallery-item-label"><span>Modern Standing Seam Metal Roof â West Vancouver</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/img-11.jpg" alt="Stonnex roofing project Burnaby BC" alt="Architectural Shingle Replacement — Lower Mainland" loading="lazy">
-        <div class="gallery-item-label"><span>Architectural Shingle Replacement — Lower Mainland</span></div>
+        <img src="/img-11.jpg" alt="Stonnex roofing project Burnaby BC" alt="Architectural Shingle Replacement â Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Architectural Shingle Replacement â Lower Mainland</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/img-12.jpg" alt="New roof installation Langley BC by Stonnex" alt="Ridge Detail & Precision Shingle Work — Burnaby" loading="lazy">
-        <div class="gallery-item-label"><span>Ridge Detail & Precision Shingle Work — Burnaby</span></div>
+        <img src="/img-12.jpg" alt="New roof installation Langley BC by Stonnex" alt="Ridge Detail & Precision Shingle Work â Burnaby" loading="lazy">
+        <div class="gallery-item-label"><span>Ridge Detail & Precision Shingle Work â Burnaby</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/img-13.jpg" alt="Roof repair and inspection Lower Mainland BC" alt="VELUX Skylight Installation — North Vancouver" loading="lazy">
-        <div class="gallery-item-label"><span>VELUX Skylight Installation — North Vancouver</span></div>
+        <img src="/img-13.jpg" alt="Roof repair and inspection Lower Mainland BC" alt="VELUX Skylight Installation â North Vancouver" loading="lazy">
+        <div class="gallery-item-label"><span>VELUX Skylight Installation â North Vancouver</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/img-14.jpg" alt="Premium residential roofing Coquitlam BC by Stonnex" alt="Luxury Residence Roofline — West Vancouver" loading="lazy">
-        <div class="gallery-item-label"><span>Luxury Residence Roofline — West Vancouver</span></div>
+        <img src="/img-14.jpg" alt="Premium residential roofing Coquitlam BC by Stonnex" alt="Luxury Residence Roofline â West Vancouver" loading="lazy">
+        <div class="gallery-item-label"><span>Luxury Residence Roofline â West Vancouver</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/img-15.jpg" alt="Stonnex roof replacement completed project BC" alt="New Construction Roof — Fraser Valley" loading="lazy">
-        <div class="gallery-item-label"><span>New Construction Roof — Fraser Valley</span></div>
+        <img src="/img-15.jpg" alt="Stonnex roof replacement completed project BC" alt="New Construction Roof â Fraser Valley" loading="lazy">
+        <div class="gallery-item-label"><span>New Construction Roof â Fraser Valley</span></div>
       </div>
     </div>
 
@@ -2600,7 +2658,7 @@
         <div class="section-eyebrow-line"></div>
       </div>
       <h2 class="section-title light">Ready to Get Started?<br><em>We'd Love to Hear From You.</em></h2>
-      <p style="font-size:17px;color:rgba(255,255,255,0.6);max-width:520px;margin:20px auto 0;font-weight:300;line-height:1.8;">Call or email us directly — we respond within one business day and offer free inspections on every project.</p>
+      <p style="font-size:17px;color:rgba(255,255,255,0.6);max-width:520px;margin:20px auto 0;font-weight:300;line-height:1.8;">Call or email us directly â we respond within one business day and offer free inspections on every project.</p>
     </div>
 
     <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:780px;margin:0 auto;">
@@ -2610,7 +2668,7 @@
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:20px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6.06 6.06l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.01z"/></svg>
         <div style="font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Call Us</div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--white);line-height:1.2;">+1-604-935-6976</div>
-        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-top:10px;font-weight:300;">Mon – Sat, 7am – 7pm</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-top:10px;font-weight:300;">Mon â Sat, 7am â 7pm</div>
       </a>
 
       <!-- Email -->
@@ -2625,7 +2683,7 @@
 
     <!-- Trust bullets -->
     <ul class="quote-trust-list reveal" style="max-width:560px;margin:52px auto 0;justify-content:center;flex-wrap:wrap;gap:12px 32px;">
-      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No obligation — no pressure ever</li>
+      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No obligation â no pressure ever</li>
       <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free roof inspection on every project</li>
       <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fixed-price written quotes</li>
       <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fully licensed, insured &amp; WorkSafeBC cleared</li>
@@ -2671,13 +2729,13 @@
           <li><a href="tel:16049356976">+1-604-935-6976</a></li>
           <li><a href="mailto:info@stonnex.com">info@stonnex.com</a></li>
           <li><a href="#">Lower Mainland, BC</a></li>
-          <li style="margin-top:8px;"><a href="#contact">Get a Quote →</a></li>
+          <li style="margin-top:8px;"><a href="#contact">Get a Quote â</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 Stonnex Roofing Ltd. All rights reserved.</p>
+      <p>Â© 2026 Stonnex Roofing Ltd. All rights reserved.</p>
       <div class="footer-bottom-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
@@ -2716,7 +2774,7 @@
     const heardFrom = selects[4]?.value || '';
 
     // Build mailto
-    const subject = encodeURIComponent('New Roofing Quote Request — Stonnex Website');
+    const subject = encodeURIComponent('New Roofing Quote Request â Stonnex Website');
     const body = encodeURIComponent(
       'NEW QUOTE REQUEST\n' +
       '================\n\n' +
