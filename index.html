@@ -1,61 +1,3 @@
-
-
-    <!-- Contact Form -->
-    <div class="reveal" style="max-width:640px;margin:48px auto 0;">
-      <div style="border:1px solid rgba(184,150,90,0.25);background:rgba(184,150,90,0.05);padding:48px 40px;">
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--white);text-align:center;margin-bottom:8px;">Send Us a Message</h3>
-        <p style="font-size:14px;color:rgba(255,255,255,0.5);text-align:center;margin-bottom:32px;font-weight:300;">We'll get back to you within one business day.</p>
-        <form action="https://formsubmit.co/calvin@stonnex.com" method="POST" id="stonnex-contact-form">
-          <input type="hidden" name="_subject" value="New Contact Form Submission - Stonnex.com">
-          <input type="hidden" name="_captcha" value="true">
-          <input type="hidden" name="_template" value="table">
-          <input type="text" name="_honey" style="display:none">
-          <input type="hidden" name="_next" value="https://stonnex.com#contact">
-
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
-            <div>
-              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">First Name *</label>
-              <input type="text" name="first_name" required placeholder="John" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
-            </div>
-            <div>
-              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Last Name *</label>
-              <input type="text" name="last_name" required placeholder="Smith" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
-            </div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
-            <div>
-              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Email *</label>
-              <input type="email" name="email" required placeholder="john@example.com" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
-            </div>
-            <div>
-              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Phone</label>
-              <input type="tel" name="phone" placeholder="604-000-0000" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
-            </div>
-          </div>
-
-          <div style="margin-bottom:16px;">
-            <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Service Needed</label>
-            <select name="service" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;appearance:none;-webkit-appearance:none;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
-              <option value="" style="background:#1e2530;">Select a service...</option>
-              <option value="Roof Replacement" style="background:#1e2530;">Roof Replacement</option>
-              <option value="Roof Repair" style="background:#1e2530;">Roof Repair</option>
-              <option value="Roof Inspection" style="background:#1e2530;">Roof Inspection</option>
-              <option value="Gutter Installation" style="background:#1e2530;">Gutter Installation</option>
-              <option value="Emergency Repair" style="background:#1e2530;">Emergency Repair</option>
-              <option value="Other" style="background:#1e2530;">Other</option>
-            </select>
-          </div>
-
-          <div style="margin-bottom:24px;">
-            <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Message *</label>
-            <textarea name="message" required rows="4" placeholder="Tell us about your project..." style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;resize:vertical;min-height:100px;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'"></textarea>
-          </div>
-
-          <button type="submit" style="width:100%;padding:16px;background:var(--gold);color:var(--white);border:none;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#b8965a'" onmouseout="this.style.background='var(--gold)'">Send Message</button>
-        </form>
-      </div>
-    </div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2682,6 +2624,63 @@
     </div>
 
     <!-- Trust bullets -->
+<!-- Contact Form -->
+    <div class="reveal" style="max-width:640px;margin:48px auto 0;">
+      <div style="border:1px solid rgba(184,150,90,0.25);background:rgba(184,150,90,0.05);padding:48px 40px;">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--white);text-align:center;margin-bottom:8px;">Send Us a Message</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.5);text-align:center;margin-bottom:32px;font-weight:300;">We'll get back to you within one business day.</p>
+        <form action="https://formsubmit.co/calvin@stonnex.com" method="POST" id="stonnex-contact-form">
+          <input type="hidden" name="_subject" value="New Contact Form Submission - Stonnex.com">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_next" value="https://stonnex.com#contact">
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div>
+              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">First Name *</label>
+              <input type="text" name="first_name" required placeholder="John" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
+            </div>
+            <div>
+              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Last Name *</label>
+              <input type="text" name="last_name" required placeholder="Smith" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div>
+              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Email *</label>
+              <input type="email" name="email" required placeholder="john@example.com" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
+            </div>
+            <div>
+              <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Phone</label>
+              <input type="tel" name="phone" placeholder="604-000-0000" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
+            </div>
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Service Needed</label>
+            <select name="service" style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;appearance:none;-webkit-appearance:none;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'">
+              <option value="" style="background:#1e2530;">Select a service...</option>
+              <option value="Roof Replacement" style="background:#1e2530;">Roof Replacement</option>
+              <option value="Roof Repair" style="background:#1e2530;">Roof Repair</option>
+              <option value="Roof Inspection" style="background:#1e2530;">Roof Inspection</option>
+              <option value="Gutter Installation" style="background:#1e2530;">Gutter Installation</option>
+              <option value="Emergency Repair" style="background:#1e2530;">Emergency Repair</option>
+              <option value="Other" style="background:#1e2530;">Other</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom:24px;">
+            <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;">Message *</label>
+            <textarea name="message" required rows="4" placeholder="Tell us about your project..." style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(184,150,90,0.2);color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border 0.3s;resize:vertical;min-height:100px;" onfocus="this.style.borderColor='rgba(184,150,90,0.6)'" onblur="this.style.borderColor='rgba(184,150,90,0.2)'"></textarea>
+          </div>
+
+          <button type="submit" style="width:100%;padding:16px;background:var(--gold);color:var(--white);border:none;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#b8965a'" onmouseout="this.style.background='var(--gold)'">Send Message</button>
+        </form>
+      </div>
+    </div>
+
     <ul class="quote-trust-list reveal" style="max-width:560px;margin:52px auto 0;justify-content:center;flex-wrap:wrap;gap:12px 32px;">
       <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No obligation â no pressure ever</li>
       <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free roof inspection on every project</li>
