@@ -1403,17 +1403,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     nav { padding: 0 24px; }
     .nav-links { display: none; }
     .nav-logo-img { height: 44px !important; }
-    .hero-content { padding: 0 24px; padding-top: 120px; padding-bottom: 100px; }
-    /* Trust strip: pull out of absolute on mobile so sticky bar doesn't cover it */
+    .hero-content { padding: 0 24px; padding-top: 120px; padding-bottom: 140px; }
+    /* Trust strip: fixed just above mobile sticky bar */
     .hero { height: auto; min-height: 100svh; padding-bottom: 0; }
-    .hero-trust-row { position: relative; bottom: auto; left: auto; right: auto; padding: 0 20px; background: rgba(25,32,42,0.97); border-top: 1px solid rgba(255,255,255,0.12); }
-    .hero-trust-inner { overflow: hidden; gap: 0; flex-wrap: nowrap; height: auto; padding: 0; }
-    .trust-badge { padding: 14px 12px; flex: 1; min-width: 0; border-right: 1px solid rgba(255,255,255,0.15); }
+    .hero-form-wrap { width: 100%; box-sizing: border-box; }
+    .hero-trust-row { position: fixed; bottom: 60px; left: 0; right: 0; z-index: 997; background: rgba(25,32,42,0.98); border-top: 1px solid rgba(255,255,255,0.12); padding: 0; }
+    .hero-trust-inner { overflow: hidden; gap: 0; flex-wrap: nowrap; height: auto; padding: 0; max-width: 100%; }
+    .trust-badge { padding: 10px 12px; flex: 1; min-width: 0; border-right: 1px solid rgba(255,255,255,0.15); }
     .trust-badge:nth-child(n+4) { display: none; }
     .trust-badge:nth-child(3) { border-right: none; }
-    .trust-badge-text { font-size: 11px; }
-    .trust-badge-text strong { font-size: 11px; }
-    .trust-badge-icon { width: 20px; height: 20px; }
+    .trust-badge-text { font-size: 10px; }
+    .trust-badge-text strong { font-size: 10px; display: block; }
+    .trust-badge-icon { width: 18px; height: 18px; flex-shrink: 0; }
     .container { padding: 0 24px; }
     .intro-grid { grid-template-columns: 1fr; gap: 48px; }
     .intro-photo-wrap img { height: 320px; }
@@ -1433,6 +1434,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 600px) {
     .trust-badge:nth-child(n+3) { display: none; }
     .trust-badge:nth-child(2) { border-right: none; }
+    .trust-badge { padding: 10px 16px; }
+    .trust-badge-text { font-size: 11px; }
+    .trust-badge-text strong { font-size: 11px; }
     .process-steps { grid-template-columns: 1fr; }
     .footer-inner { grid-template-columns: 1fr; }
     .cta-form { flex-direction: column; }
