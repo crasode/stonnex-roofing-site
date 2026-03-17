@@ -1402,8 +1402,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-links { display: none; }
+    .nav-logo-img { height: 44px !important; }
     .hero-content { padding: 0 24px; padding-top: 120px; padding-bottom: 100px; }
-    .hero-trust-row { padding: 0 20px; }
+    /* Trust strip: pull out of absolute on mobile so sticky bar doesn't cover it */
+    .hero { height: auto; min-height: 100svh; padding-bottom: 0; }
+    .hero-trust-row { position: relative; bottom: auto; left: auto; right: auto; padding: 0 20px; background: rgba(25,32,42,0.97); border-top: 1px solid rgba(255,255,255,0.12); }
     .hero-trust-inner { overflow: hidden; gap: 0; flex-wrap: nowrap; height: auto; padding: 0; }
     .trust-badge { padding: 14px 12px; flex: 1; min-width: 0; border-right: 1px solid rgba(255,255,255,0.15); }
     .trust-badge:nth-child(n+4) { display: none; }
@@ -1818,7 +1821,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAVIGATION -->
 <nav id="mainNav">
   <a href="#" class="nav-logo">
-    <img src="/logo-black.svg" alt="Stonnex Group" style="height:36px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+    <img src="/logo-black.svg" alt="Stonnex Group" class="nav-logo-img" style="height:36px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
     <span class="nav-logo-text" style="display:none;">Stonnex</span>
   </a>
   <ul class="nav-links">
@@ -2452,40 +2455,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="gallery-grid reveal">
       <div class="gallery-item" style="grid-row:span 2;">
-        <img src="/drone-hero.jpg" alt="Aerial drone view of completed roof installation &mdash; Lower Mainland" loading="lazy">
-        <div class="gallery-item-label"><span>Aerial View &mdash; Completed Roof Installation</span></div>
+        <img src="/wp1.jpg" alt="Aerial view of modern home with standing seam metal roof &mdash; Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Standing Seam Metal Roof &mdash; Modern Home</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/drone-v2.jpg" alt="Drone aerial of residential roofing project &mdash; Lower Mainland" loading="lazy">
-        <div class="gallery-item-label"><span>Drone Aerial &mdash; Residential Project</span></div>
+        <img src="/wp2.jpg" alt="Aerial view of completed roof with rooftop deck &mdash; Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Aerial View &mdash; Completed Roof &amp; Deck</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/drone-aerial-1.jpg" alt="Roofing project aerial view &mdash; Lower Mainland" loading="lazy">
-        <div class="gallery-item-label"><span>Aerial View &mdash; Project Site</span></div>
+        <img src="/wp3.jpg" alt="Rooftop view at sunset with city skyline &mdash; Lower Mainland BC" loading="lazy">
+        <div class="gallery-item-label"><span>Golden Hour &mdash; Burnaby / Metrotown View</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/drone-aerial-3.jpg" alt="Overhead drone shot of Stonnex roofing installation" loading="lazy">
-        <div class="gallery-item-label"><span>Overhead View &mdash; Active Installation</span></div>
+        <img src="/wp4.jpg" alt="Dark architectural shingles ridge &mdash; city view in background" loading="lazy">
+        <div class="gallery-item-label"><span>Architectural Shingles &mdash; Ridge Detail</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/drone-aerial-5.jpg" alt="Completed residential roofing &mdash; Lower Mainland BC" loading="lazy">
-        <div class="gallery-item-label"><span>Completed Residential Roof &mdash; Lower Mainland</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/drone-aerial-7.jpg" alt="Stonnex roofing project &mdash; aerial perspective" loading="lazy">
-        <div class="gallery-item-label"><span>Aerial Perspective &mdash; Stonnex Project</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/img-10.jpg" alt="Modern Standing Seam Metal Roof &mdash; West Vancouver" loading="lazy">
-        <div class="gallery-item-label"><span>Standing Seam Metal Roof &mdash; West Vancouver</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/img-11.jpg" alt="Architectural Shingle Replacement &mdash; Lower Mainland" loading="lazy">
-        <div class="gallery-item-label"><span>Architectural Shingle Replacement</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/img-13.jpg" alt="VELUX Skylight Installation &mdash; North Vancouver" loading="lazy">
+        <img src="/wp5.jpg" alt="VELUX skylight installation on dark shingle roof &mdash; blue sky" loading="lazy">
         <div class="gallery-item-label"><span>VELUX Skylight Installation &mdash; North Vancouver</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/wp6.jpg" alt="Skylight installation with architectural trim detail" loading="lazy">
+        <div class="gallery-item-label"><span>Skylight &amp; Flashing Detail Work</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/wp7.jpg" alt="Standing seam metal roof installation in progress" loading="lazy">
+        <div class="gallery-item-label"><span>Standing Seam Metal &mdash; Installation</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/wp8.jpg" alt="Standing seam metal roof with Fraser Valley view" loading="lazy">
+        <div class="gallery-item-label"><span>Standing Seam Metal &mdash; Fraser Valley</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/wp9.jpg" alt="Dark architectural shingles at dusk &mdash; Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Architectural Shingles &mdash; Completed Project</span></div>
       </div>
     </div>
 
