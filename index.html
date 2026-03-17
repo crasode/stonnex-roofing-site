@@ -1407,7 +1407,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* Trust strip: fixed just above mobile sticky bar */
     .hero { height: auto; min-height: 100svh; padding-bottom: 0; }
     .hero-form-wrap { width: 100%; box-sizing: border-box; }
-    .hero-trust-row { position: fixed; bottom: 60px; left: 0; right: 0; z-index: 997; background: rgba(25,32,42,0.98); border-top: 1px solid rgba(255,255,255,0.12); padding: 0; }
+    .hero-trust-row { position: fixed; bottom: calc(60px + env(safe-area-inset-bottom, 0px)); left: 0; right: 0; z-index: 997; background: rgba(25,32,42,0.98); border-top: 1px solid rgba(255,255,255,0.12); padding: 0; }
     .hero-trust-inner { overflow: hidden; gap: 0; flex-wrap: nowrap; height: auto; padding: 0; max-width: 100%; }
     .trust-badge { padding: 10px 12px; flex: 1; min-width: 0; border-right: 1px solid rgba(255,255,255,0.15); }
     .trust-badge:nth-child(n+4) { display: none; }
@@ -1694,9 +1694,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .mobile-sticky-btn:hover { opacity: 0.92; }
   @media (max-width: 768px) {
     .mobile-sticky-bar { display: block; }
-    body { padding-bottom: 56px; }
+    /* iOS safe area: prevent sticky bar from hiding behind home indicator */
+    .mobile-sticky-bar { padding-bottom: env(safe-area-inset-bottom, 0px); }
+    body { padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px)); }
     .hero-form-row { grid-template-columns: 1fr; }
     .hero-form-wrap { padding: 20px 18px 24px; margin-top: 28px; }
+    /* Hide floating phone button — CALL NOW in sticky bar covers this */
+    .sticky-phone { display: none !important; }
+    /* Move WhatsApp button above trust strip + safe area */
+    .sticky-cta { bottom: calc(130px + env(safe-area-inset-bottom, 0px)); right: 16px; }
   }
 
   /* ─── MID-PAGE CTA BANNERS ─── */
