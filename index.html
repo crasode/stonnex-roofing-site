@@ -177,9 +177,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     inset: 0;
     filter: blur(3px) brightness(0.7);
     transform: scale(1.04);
-    background-image: url('/hero-bg.jpg');
+    background-image: url('/drone-hero.jpg');
     background-size: cover;
-    background-position: center 30%;
+    background-position: center 40%;
   }
   .hero-bg::after {
     content: '';
@@ -1563,6 +1563,224 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .gallery-item:first-child { grid-row: span 1; }
   }
 
+  /* ─── HERO INLINE FORM ─── */
+  .hero-form-wrap {
+    margin-top: 40px;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 28px 32px 32px;
+    max-width: 560px;
+    animation: fadeUp 0.9s var(--transition) 0.6s both;
+  }
+  .hero-form-label {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    font-weight: 500;
+    margin-bottom: 18px;
+    display: block;
+  }
+  .hero-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .hero-form-row.single { grid-template-columns: 1fr; }
+  .hero-form-input {
+    width: 100%;
+    padding: 13px 16px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.3s;
+    border-radius: 2px;
+    -webkit-appearance: none;
+  }
+  .hero-form-input::placeholder { color: rgba(255,255,255,0.45); }
+  .hero-form-input:focus { border-color: var(--gold-light); }
+  .hero-form-select {
+    background-color: #1e2833;
+    color: var(--white);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%23c49a58" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+  }
+  .hero-form-select option { background: #1e2530; }
+  .hero-form-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 2px;
+    margin-top: 4px;
+  }
+  .hero-form-btn:hover { background: var(--gold-light); }
+  .hero-form-secondary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+  }
+  .hero-form-secondary a {
+    color: var(--gold-light);
+    text-decoration: none;
+    font-weight: 400;
+  }
+  .hero-form-secondary a:hover { text-decoration: underline; }
+
+  /* ─── MOBILE STICKY BAR ─── */
+  .mobile-sticky-bar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 200;
+    background: var(--slate);
+    border-top: 2px solid var(--gold);
+    padding: 0;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+  }
+  .mobile-sticky-bar-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .mobile-sticky-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .mobile-sticky-btn.quote {
+    background: var(--gold);
+    color: var(--white);
+  }
+  .mobile-sticky-btn.call {
+    background: var(--slate-mid);
+    color: var(--white);
+    border-left: 1px solid rgba(255,255,255,0.1);
+  }
+  .mobile-sticky-btn:hover { opacity: 0.92; }
+  @media (max-width: 768px) {
+    .mobile-sticky-bar { display: block; }
+    body { padding-bottom: 56px; }
+    .hero-form-row { grid-template-columns: 1fr; }
+    .hero-form-wrap { padding: 20px 18px 24px; margin-top: 28px; }
+  }
+
+  /* ─── MID-PAGE CTA BANNERS ─── */
+  .mid-cta-banner {
+    background: var(--slate);
+    padding: 60px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .mid-cta-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(160,121,61,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .mid-cta-banner-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .mid-cta-banner-title em { color: var(--gold-light); font-style: italic; }
+  .mid-cta-banner-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.58);
+    font-weight: 300;
+    margin-bottom: 32px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+  .mid-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold);
+    color: var(--white);
+    padding: 17px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.3s;
+    border: 2px solid var(--gold);
+  }
+  .mid-cta-btn:hover { background: transparent; color: var(--gold-light); border-color: var(--gold-light); }
+  .mid-cta-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: rgba(255,255,255,0.65);
+    padding: 17px 32px;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 2px;
+    margin-left: 16px;
+    transition: all 0.3s;
+  }
+  .mid-cta-btn-ghost:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
+  .mid-cta-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+  .mid-cta-trust-item {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mid-cta-trust-item svg { color: var(--gold); }
+  @media (max-width: 640px) {
+    .mid-cta-banner { padding: 48px 24px; }
+    .mid-cta-btn-ghost { margin-left: 0; margin-top: 12px; }
+  }
+
 </style>
   <script src="https://app.roofle.com/roof-quote-pro-widget.js?id=BcZ84ee4Bj5-sAtZot4pJ" async></script>
 </head>
@@ -1571,6 +1789,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QSM524G"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<!-- MOBILE STICKY BOTTOM BAR -->
+<div class="mobile-sticky-bar">
+  <div class="mobile-sticky-bar-inner">
+    <a href="#roofle-quote" class="mobile-sticky-btn quote">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Get Instant Quote
+    </a>
+    <a href="tel:16049356976" class="mobile-sticky-btn call">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.72 3.4 2 2 0 0 1 3.69 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+      Call Now
+    </a>
+  </div>
+</div>
 
 <!-- STICKY CTA BUTTONS -->
 <div class="sticky-cta">
@@ -1586,7 +1818,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAVIGATION -->
 <nav id="mainNav">
   <a href="#" class="nav-logo">
-    <span class="nav-logo-text">Stonnex</span>
+    <img src="/logo-black.svg" alt="Stonnex Group" style="height:36px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+    <span class="nav-logo-text" style="display:none;">Stonnex</span>
   </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
@@ -1610,23 +1843,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span>Lower Mainland &middot; BC</span>
     </div>
     <h1 class="hero-title">
-      Roofing Crafted<br>for <em>Exceptional</em><br>Homes.
+      Certified Roofing<br>for the <em>Lower Mainland</em>
     </h1>
     <p class="hero-subtitle">
-      Expert roofing installations, replacements and repairs for homeowners across the Lower Mainland. Fully certified, fully insured &mdash; backed by written warranties on every project.
+      Free inspections. Instant online quotes. Warranties up to 50 years. Serving every community from West Vancouver to Chilliwack.
     </p>
-    <div class="hero-actions">
-      <a href="#roofle-quote" class="btn-primary" style="background:var(--slate);border-color:var(--slate);">
-        Get Your Price in 60 Seconds
-      </a>
-      <a href="#contact" class="btn-primary">
-        Request Free Inspection
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <a href="#process" class="btn-secondary">
-        How We Work
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </a>
+
+    <!-- Hero Inline Lead Form -->
+    <div class="hero-form-wrap">
+      <span class="hero-form-label">Get Your Free Inspection &mdash; Takes 30 Seconds</span>
+      <form action="https://formsubmit.co/calvin@stonnex.com" method="POST" id="hero-lead-form">
+        <input type="hidden" name="_subject" value="Hero Form Lead - Stonnex.com">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_next" value="https://stonnex.com/thankyou">
+        <div class="hero-form-row">
+          <input type="text" name="name" required placeholder="Your Name" class="hero-form-input">
+          <input type="tel" name="phone" required placeholder="Phone Number" class="hero-form-input">
+        </div>
+        <div class="hero-form-row single">
+          <select name="service" class="hero-form-input hero-form-select">
+            <option value="" style="background:#1e2530;">What do you need?</option>
+            <option value="Roof Replacement" style="background:#1e2530;">Roof Replacement</option>
+            <option value="Roof Repair" style="background:#1e2530;">Roof Repair</option>
+            <option value="Roof Inspection" style="background:#1e2530;">Roof Inspection</option>
+            <option value="Emergency Repair" style="background:#1e2530;">Emergency Repair</option>
+            <option value="Gutters / Drainage" style="background:#1e2530;">Gutters / Drainage</option>
+            <option value="Flat / Torch-On Roof" style="background:#1e2530;">Flat / Torch-On Roof</option>
+            <option value="Commercial / Strata" style="background:#1e2530;">Commercial / Strata</option>
+            <option value="Other" style="background:#1e2530;">Other</option>
+          </select>
+        </div>
+        <button type="submit" class="hero-form-btn">Book My Free Inspection</button>
+      </form>
+      <div class="hero-form-secondary">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        No obligation &nbsp;&middot;&nbsp; Respond within one business day &nbsp;&middot;&nbsp; <a href="#roofle-quote">Prefer an instant quote?</a>
+      </div>
     </div>
   </div>
 
@@ -1737,7 +1991,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         <h3 class="service-title">Residential Roofing</h3>
         <p class="service-desc">Full roof replacements and new installations for single-family homes, custom builds, and luxury residences. Cedar shake, standing seam metal, architectural asphalt, and slate profiles &mdash; all suited to BC's coastal climate.</p>
-        <a href="#contact" class="service-link">
+        <a href="#roofle-quote" class="service-link">
           Get a Quote
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -1747,7 +2001,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
         <h3 class="service-title">Roof Repairs & Maintenance</h3>
         <p class="service-desc">Emergency leak response and preventive maintenance programs. We identify the root cause &mdash; not just the symptom &mdash; and repair it once, with documented workmanship backing every fix.</p>
-        <a href="#contact" class="service-link">
+        <a href="#roofle-quote" class="service-link">
           Book Inspection
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -1757,7 +2011,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <h3 class="service-title">Flat & Torch-On Membrane</h3>
         <p class="service-desc">Specialised flat and low-slope roofing for modern West Coast architecture, coach houses, and secondary suites. Fully waterproofed membrane systems with extended manufacturer coverage &mdash; the right solution for BC's relentless rainfall.</p>
-        <a href="#contact" class="service-link">
+        <a href="#roofle-quote" class="service-link">
           Learn More
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -1767,7 +2021,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
         <h3 class="service-title">Roof Inspections & Reports</h3>
         <p class="service-desc">Insurance, pre-purchase, and annual condition inspections with professional written reports. Accepted by all major BC insurers and lenders. Includes drone imagery and thermal assessment on request.</p>
-        <a href="#contact" class="service-link">
+        <a href="#roofle-quote" class="service-link">
           Schedule Now
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -1777,7 +2031,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
         <h3 class="service-title">Gutters & Drainage</h3>
         <p class="service-desc">Seamless aluminum gutters, downspout systems, and perimeter drainage solutions designed for BC rainfall volumes. We engineer the full water management system &mdash; from fascia to foundation.</p>
-        <a href="#contact" class="service-link">
+        <a href="#roofle-quote" class="service-link">
           Get a Quote
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -1787,7 +2041,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <h3 class="service-title">Skylights & Ventilation</h3>
         <p class="service-desc">VELUX-certified skylight installation and roof ventilation systems that extend roof life, reduce energy costs, and meet BC Building Code requirements. Includes weatherproofing and full flashing replacement.</p>
-        <a href="#contact" class="service-link">
+        <a href="#roofle-quote" class="service-link">
           Learn More
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -1795,17 +2049,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     
-    <!-- PHOTO STRIP &mdash; Roof Types Showcase -->
+    <!-- PHOTO STRIP &mdash; Drone Aerials -->
     <div class="reveal" style="margin-top:60px;margin-bottom:0;">
-      <p style="font-size:12px;color:var(--text-light);letter-spacing:0.06em;text-transform:uppercase;text-align:center;margin-bottom:14px;">Shingle &amp; metal installations across the Lower Mainland</p>
-      <div class="sn-photo-strip" style="display:grid;grid-template-columns:1fr 1fr;gap:3px;overflow:hidden;border-radius:2px;max-width:900px;margin:0 auto;">
+      <p style="font-size:12px;color:var(--text-light);letter-spacing:0.06em;text-transform:uppercase;text-align:center;margin-bottom:14px;">Completed roofing projects across the Lower Mainland</p>
+      <div class="sn-photo-strip" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;overflow:hidden;border-radius:2px;">
         <div style="position:relative;overflow:hidden;aspect-ratio:4/3;">
-          <img src="/img-3.jpg" alt="Standing seam metal roofing installation" loading="lazy"
+          <img src="/drone-aerial-2.jpg" alt="Aerial view of completed roof installation" loading="lazy"
             style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div style="position:relative;overflow:hidden;aspect-ratio:4/3;">
-          <img src="/img-4.jpg" alt="Metal roof installation" loading="lazy"
+          <img src="/drone-aerial-4.jpg" alt="Drone view of residential roofing project" loading="lazy"
             style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div style="position:relative;overflow:hidden;aspect-ratio:4/3;">
+          <img src="/drone-aerial-6.jpg" alt="Lower Mainland roofing aerial view" loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+      </div>
+    </div>
+
+    <!-- MID-PAGE CTA #1: After Services -->
+    <div class="mid-cta-banner reveal" style="margin-top:60px;margin-bottom:0;border-radius:2px;">
+      <div style="position:relative;z-index:1;">
+        <p class="mid-cta-banner-title">See Your Roof Price<br><em>in 60 Seconds</em></p>
+        <p class="mid-cta-banner-sub">Enter your address into our instant quote tool. Real pricing from IKO, GAF, and Malarkey. No calls, no pressure.</p>
+        <a href="#roofle-quote" class="mid-cta-btn">
+          Get Instant Quote
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#contact" class="mid-cta-btn-ghost">Request Free Inspection</a>
+        <div class="mid-cta-trust">
+          <span class="mid-cta-trust-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            WorkSafeBC Registered
+          </span>
+          <span class="mid-cta-trust-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            $5M Liability Insured
+          </span>
+          <span class="mid-cta-trust-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Free Inspections
+          </span>
+          <span class="mid-cta-trust-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Up to 50-Year Warranty
+          </span>
         </div>
       </div>
     </div>
@@ -1907,6 +2196,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size:13px;color:rgba(255,255,255,0.85);font-weight:300;letter-spacing:0.04em;line-height:1.7;text-shadow:0 1px 4px rgba(0,0,0,0.5);">From substrate inspection to final course &mdash; every step documented and overseen by a certified lead roofer.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID-PAGE CTA #2: After Process -->
+<section style="padding:0;background:var(--cream);">
+  <div class="mid-cta-banner reveal" style="margin:0;border-radius:0;">
+    <div style="position:relative;z-index:1;">
+      <p class="mid-cta-banner-title">Ready to Get Started?<br><em>Book Your Free Inspection</em></p>
+      <p class="mid-cta-banner-sub">Our team responds within one business day. Fixed-price quotes, no obligation, fully documented from start to finish.</p>
+      <a href="#contact" class="mid-cta-btn">
+        Request Free Inspection
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="tel:16049356976" class="mid-cta-btn-ghost">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.72 3.4 2 2 0 0 1 3.69 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+        604-935-6976
+      </a>
     </div>
   </div>
 </section>
@@ -2145,28 +2452,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="gallery-grid reveal">
       <div class="gallery-item" style="grid-row:span 2;">
+        <img src="/drone-hero.jpg" alt="Aerial drone view of completed roof installation &mdash; Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Aerial View &mdash; Completed Roof Installation</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/drone-v2.jpg" alt="Drone aerial of residential roofing project &mdash; Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Drone Aerial &mdash; Residential Project</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/drone-aerial-1.jpg" alt="Roofing project aerial view &mdash; Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Aerial View &mdash; Project Site</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/drone-aerial-3.jpg" alt="Overhead drone shot of Stonnex roofing installation" loading="lazy">
+        <div class="gallery-item-label"><span>Overhead View &mdash; Active Installation</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/drone-aerial-5.jpg" alt="Completed residential roofing &mdash; Lower Mainland BC" loading="lazy">
+        <div class="gallery-item-label"><span>Completed Residential Roof &mdash; Lower Mainland</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/drone-aerial-7.jpg" alt="Stonnex roofing project &mdash; aerial perspective" loading="lazy">
+        <div class="gallery-item-label"><span>Aerial Perspective &mdash; Stonnex Project</span></div>
+      </div>
+      <div class="gallery-item">
         <img src="/img-10.jpg" alt="Modern Standing Seam Metal Roof &mdash; West Vancouver" loading="lazy">
-        <div class="gallery-item-label"><span>Modern Standing Seam Metal Roof &mdash; West Vancouver</span></div>
+        <div class="gallery-item-label"><span>Standing Seam Metal Roof &mdash; West Vancouver</span></div>
       </div>
       <div class="gallery-item">
         <img src="/img-11.jpg" alt="Architectural Shingle Replacement &mdash; Lower Mainland" loading="lazy">
-        <div class="gallery-item-label"><span>Architectural Shingle Replacement &mdash; Lower Mainland</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/img-12.jpg" alt="Ridge Detail & Precision Shingle Work &mdash; Burnaby" loading="lazy">
-        <div class="gallery-item-label"><span>Ridge Detail & Precision Shingle Work &mdash; Burnaby</span></div>
+        <div class="gallery-item-label"><span>Architectural Shingle Replacement</span></div>
       </div>
       <div class="gallery-item">
         <img src="/img-13.jpg" alt="VELUX Skylight Installation &mdash; North Vancouver" loading="lazy">
         <div class="gallery-item-label"><span>VELUX Skylight Installation &mdash; North Vancouver</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/img-14.jpg" alt="Luxury Residence Roofline &mdash; West Vancouver" loading="lazy">
-        <div class="gallery-item-label"><span>Luxury Residence Roofline &mdash; West Vancouver</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/img-15.jpg" alt="New Construction Roof &mdash; Fraser Valley" loading="lazy">
-        <div class="gallery-item-label"><span>New Construction Roof &mdash; Fraser Valley</span></div>
       </div>
     </div>
 
@@ -2397,19 +2716,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   (function() {
     const params = new URLSearchParams(window.location.search);
     const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'];
-    const form = document.getElementById('stonnex-contact-form');
-    if (form) {
-      utmKeys.forEach(key => {
-        const val = params.get(key);
-        if (val) {
-          const input = document.createElement('input');
-          input.type = 'hidden';
-          input.name = key;
-          input.value = val;
-          form.appendChild(input);
-        }
-      });
-    }
+    ['stonnex-contact-form', 'hero-lead-form'].forEach(function(id) {
+      const form = document.getElementById(id);
+      if (form) {
+        utmKeys.forEach(key => {
+          const val = params.get(key);
+          if (val) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = val;
+            form.appendChild(input);
+          }
+        });
+      }
+    });
   })();
 
   // &#9472;&#9472;&#9472; FORM SUBMISSION: THANK-YOU STATE + CONVERSION TRACKING &#9472;&#9472;&#9472;
