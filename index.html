@@ -10,16 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5QSM524G');</script>
 <!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stonnex Roofing — Trusted Roofers & Instant Quotes — Lower Mainland BC</title>
+<title>Stonnex Roofing &mdash; Certified Roofing for the Lower Mainland's Finest Homes</title>
 <meta name="description" content="Expert roofing installations, replacements and repairs across the Lower Mainland. Get an instant roof quote in 60 seconds. Free inspections, fully certified, fully insured.">
-<meta property="og:title" content="Stonnex Roofing — Trusted Roofers & Instant Quotes — Lower Mainland BC">
-<meta property="og:description" content="Free inspections. Instant online quotes. Warranties up to 50 years. Serving West Vancouver to Chilliwack. Call 604-935-6976.">
-<meta property="og:url" content="https://stonnex.com/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://stonnex.com/drone-hero.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Stonnex Roofing — Trusted Roofers & Instant Quotes — Lower Mainland BC">
-<meta name="twitter:description" content="Free inspections. Instant online quotes. Warranties up to 50 years. Serving West Vancouver to Chilliwack.">
 <link rel="canonical" href="https://stonnex.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -40,11 +32,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@type": "RoofingContractor",
   "name": "Stonnex Roofing",
   "url": "https://stonnex.com",
-  "logo": "https://stonnex.com/logo-black.svg",
-  "image": "https://stonnex.com/drone-hero.jpg",
   "telephone": "+1-604-935-6976",
   "email": "info@stonnex.com",
-  "description": "Expert roofing installations, replacements and repairs for homeowners across the Lower Mainland. Free inspections. Instant online quotes. Warranties up to 50 years.",
+  "description": "Expert roofing installations, replacements and repairs for homeowners across the Lower Mainland. Fully certified, fully insured, backed by written warranties.",
   "areaServed": [
     {"@type": "City", "name": "Vancouver"},
     {"@type": "City", "name": "Burnaby"},
@@ -68,17 +58,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   },
   "priceRange": "$$",
   "openingHours": "Mo-Sa 07:00-19:00",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Roofing Services",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Roofing", "url": "https://stonnex.com/residential-roofing"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Repairs", "url": "https://stonnex.com/roof-repairs"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Flat & Torch-On Roofing", "url": "https://stonnex.com/flat-roofing"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Inspections", "url": "https://stonnex.com/roof-inspections"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Reroofing", "url": "https://stonnex.com/reroofing"}}
-    ]
-  },
   "sameAs": []
 }
 </script>
@@ -169,6 +148,90 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   .nav-links a:hover { color: var(--gold); }
 
+  /* ─── NAV DROPDOWNS ─── */
+  .nav-links li { position: relative; }
+
+  .nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+    min-width: 220px;
+    padding: 16px 0 10px;
+    z-index: 200;
+    border-radius: 3px;
+  }
+
+  .nav-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    rotate: 45deg;
+  }
+
+  .nav-dropdown a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: var(--text-mid) !important;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-dropdown a:hover {
+    background: var(--cream);
+    color: var(--gold) !important;
+  }
+
+  .nav-dropdown-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 6px 0;
+  }
+
+  .has-dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .has-dropdown > a::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 0.2s;
+  }
+
+  .has-dropdown:hover > a::after { transform: rotate(225deg) translateY(-2px); }
+  .has-dropdown:hover .nav-dropdown { display: block; }
+
+  /* Wide dropdown for service areas */
+  .nav-dropdown.wide {
+    min-width: 320px;
+    display: none;
+  }
+
+  .has-dropdown:hover .nav-dropdown.wide { display: grid; grid-template-columns: 1fr 1fr; }
+
+  .nav-dropdown.wide a { font-size: 13.5px; padding: 9px 18px; }
+
   .nav-cta {
     background: var(--gold);
     color: var(--white) !important;
@@ -185,8 +248,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* &#9472;&#9472;&#9472; HERO &#9472;&#9472;&#9472; */
   .hero {
     position: relative;
-    min-height: 100vh;
-    min-height: 100svh;
+    height: 100vh;
+    min-height: 720px;
     display: flex;
     align-items: flex-start;
     overflow: hidden;
@@ -236,7 +299,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 0 auto;
     padding: 0 48px;
     padding-top: calc(84px + 10vh);
-    padding-bottom: 80px;
+    padding-bottom: 120px;
     width: 100%;
   }
 
@@ -1423,19 +1486,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-links { display: none; }
-    .nav-logo-img { height: 44px !important; }
-    .hero-content { padding: 0 24px; padding-top: 120px; padding-bottom: 140px; }
-    /* Trust strip: fixed just above mobile sticky bar */
-    .hero { height: auto; min-height: 100svh; padding-bottom: 0; }
-    .hero-form-wrap { width: 100%; box-sizing: border-box; }
-    .hero-trust-row { position: fixed; bottom: calc(60px + env(safe-area-inset-bottom, 0px)); left: 0; right: 0; z-index: 997; background: rgba(25,32,42,0.98); border-top: 1px solid rgba(255,255,255,0.12); padding: 0; }
-    .hero-trust-inner { overflow: hidden; gap: 0; flex-wrap: nowrap; height: auto; padding: 0; max-width: 100%; }
-    .trust-badge { padding: 10px 12px; flex: 1; min-width: 0; border-right: 1px solid rgba(255,255,255,0.15); }
+    .hero-content { padding: 0 24px; padding-top: 120px; padding-bottom: 100px; }
+    .hero-trust-row { padding: 0 20px; }
+    .hero-trust-inner { overflow: hidden; gap: 0; flex-wrap: nowrap; height: auto; padding: 0; }
+    .trust-badge { padding: 14px 12px; flex: 1; min-width: 0; border-right: 1px solid rgba(255,255,255,0.15); }
     .trust-badge:nth-child(n+4) { display: none; }
     .trust-badge:nth-child(3) { border-right: none; }
-    .trust-badge-text { font-size: 10px; }
-    .trust-badge-text strong { font-size: 10px; display: block; }
-    .trust-badge-icon { width: 18px; height: 18px; flex-shrink: 0; }
+    .trust-badge-text { font-size: 11px; }
+    .trust-badge-text strong { font-size: 11px; }
+    .trust-badge-icon { width: 20px; height: 20px; }
     .container { padding: 0 24px; }
     .intro-grid { grid-template-columns: 1fr; gap: 48px; }
     .intro-photo-wrap img { height: 320px; }
@@ -1455,9 +1514,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 600px) {
     .trust-badge:nth-child(n+3) { display: none; }
     .trust-badge:nth-child(2) { border-right: none; }
-    .trust-badge { padding: 10px 16px; }
-    .trust-badge-text { font-size: 11px; }
-    .trust-badge-text strong { font-size: 11px; }
     .process-steps { grid-template-columns: 1fr; }
     .footer-inner { grid-template-columns: 1fr; }
     .cta-form { flex-direction: column; }
@@ -1715,15 +1771,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .mobile-sticky-btn:hover { opacity: 0.92; }
   @media (max-width: 768px) {
     .mobile-sticky-bar { display: block; }
-    /* iOS safe area: prevent sticky bar from hiding behind home indicator */
-    .mobile-sticky-bar { padding-bottom: env(safe-area-inset-bottom, 0px); }
-    body { padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px)); }
+    body { padding-bottom: 56px; }
     .hero-form-row { grid-template-columns: 1fr; }
     .hero-form-wrap { padding: 20px 18px 24px; margin-top: 28px; }
-    /* Hide floating phone button — CALL NOW in sticky bar covers this */
-    .sticky-phone { display: none !important; }
-    /* Move WhatsApp button above trust strip + safe area */
-    .sticky-cta { bottom: calc(130px + env(safe-area-inset-bottom, 0px)); right: 16px; }
   }
 
   /* ─── MID-PAGE CTA BANNERS ─── */
@@ -1852,15 +1902,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAVIGATION -->
 <nav id="mainNav">
   <a href="#" class="nav-logo">
-    <img src="/logo-black.svg?v=3" alt="Stonnex Group" class="nav-logo-img" style="height:36px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+    <img src="/logo-black.svg" alt="Stonnex Group" style="height:36px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
     <span class="nav-logo-text" style="display:none;">Stonnex</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
+    <li class="has-dropdown">
+      <a href="#services">Services</a>
+      <div class="nav-dropdown">
+        <a href="/roof-replacement">Roof Replacement</a>
+        <a href="/reroofing">Reroofing</a>
+        <a href="/roof-repair">Roof Repair</a>
+        <a href="/flat-roofing">Flat &amp; Torch-On Roofing</a>
+        <a href="/roof-inspection">Roof Inspections</a>
+        <a href="/gutters">Gutters &amp; Drainage</a>
+        <a href="/skylights">Skylights &amp; Ventilation</a>
+      </div>
+    </li>
     <li><a href="#process">Our Process</a></li>
     <li><a href="#credentials">Why Us</a></li>
     <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#areas">Service Areas</a></li>
+    <li class="has-dropdown">
+      <a href="#areas">Service Areas</a>
+      <div class="nav-dropdown wide">
+        <a href="/roofing-vancouver">Vancouver</a>
+        <a href="/roofing-burnaby">Burnaby</a>
+        <a href="/roofing-surrey">Surrey</a>
+        <a href="/roofing-langley">Langley</a>
+        <a href="/roofing-north-vancouver">North Vancouver</a>
+        <a href="/roofing-west-vancouver">West Vancouver</a>
+        <a href="/roofing-coquitlam">Coquitlam</a>
+        <a href="/roofing-richmond">Richmond</a>
+        <a href="/roofing-new-westminster">New Westminster</a>
+        <a href="/roofing-delta">Delta</a>
+        <a href="/roofing-maple-ridge">Maple Ridge</a>
+        <a href="/roofing-abbotsford">Abbotsford</a>
+        <a href="/roofing-chilliwack">Chilliwack</a>
+        <a href="/roofing-port-coquitlam">Port Coquitlam</a>
+      </div>
+    </li>
     <li><a href="tel:+16049356976" class="nav-cta">604-935-6976</a></li>
   </ul>
 </nav>
@@ -1895,6 +1974,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="hero-form-row">
           <input type="text" name="name" required placeholder="Your Name" class="hero-form-input">
           <input type="tel" name="phone" required placeholder="Phone Number" class="hero-form-input">
+        </div>
+        <div class="hero-form-row single">
+          <input type="email" name="email" required placeholder="Email Address" class="hero-form-input">
         </div>
         <div class="hero-form-row single">
           <select name="service" class="hero-form-input hero-form-select">
@@ -1934,7 +2016,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Certificate on request
         </div>
       </div>
-
       <div class="trust-badge">
         <svg class="trust-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         <div class="trust-badge-text">
@@ -1950,19 +2031,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Lower Mainland &amp; Fraser Valley
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- BBB ACCREDITATION -->
-<section style="background:#fff;padding:40px 24px;border-bottom:1px solid rgba(0,0,0,0.06);">
-  <div style="max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;">
-    <a href="https://www.bbb.org/ca/bc/langley/profile/roofing-contractors/stonnex-roofing-0037-2438361/#sealclick" target="_blank" rel="nofollow" style="flex-shrink:0;">
-      <img src="https://seal-mbc.bbb.org/seals/black-seal-120-61-bbb-2438361.png" style="border:0;height:70px;width:auto;display:block;" alt="Stonnex Roofing BBB Business Review" />
-    </a>
-    <div style="border-left:2px solid #e5e0d8;padding-left:40px;">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:#1e2530;margin:0 0 6px;line-height:1.3;">BBB Accredited Business</p>
-      <p style="font-family:'Inter',sans-serif;font-size:0.875rem;color:#6b7280;margin:0;line-height:1.6;max-width:400px;">Stonnex Roofing is an accredited member of the Better Business Bureau &mdash; a recognized standard of trust for homeowners across British Columbia.</p>
     </div>
   </div>
 </section>
@@ -2037,10 +2105,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="services-grid">
       <div class="service-card reveal">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        <h3 class="service-title">Residential Roofing</h3>
+        <h3 class="service-title">Roof Replacement</h3>
         <p class="service-desc">Full roof replacements and new installations for single-family homes, custom builds, and luxury residences. Cedar shake, standing seam metal, architectural asphalt, and slate profiles &mdash; all suited to BC's coastal climate.</p>
-        <a href="/residential-roofing" class="service-link">
-          Learn More
+        <a href="#roofle-quote" class="service-link">
+          Get a Quote
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
@@ -2049,8 +2117,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
         <h3 class="service-title">Roof Repairs & Maintenance</h3>
         <p class="service-desc">Emergency leak response and preventive maintenance programs. We identify the root cause &mdash; not just the symptom &mdash; and repair it once, with documented workmanship backing every fix.</p>
-        <a href="/roof-repairs" class="service-link">
-          Learn More
+        <a href="#roofle-quote" class="service-link">
+          Book Inspection
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
@@ -2059,7 +2127,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <h3 class="service-title">Flat & Torch-On Membrane</h3>
         <p class="service-desc">Specialised flat and low-slope roofing for modern West Coast architecture, coach houses, and secondary suites. Fully waterproofed membrane systems with extended manufacturer coverage &mdash; the right solution for BC's relentless rainfall.</p>
-        <a href="/flat-roofing" class="service-link">
+        <a href="#roofle-quote" class="service-link">
           Learn More
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -2069,8 +2137,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
         <h3 class="service-title">Roof Inspections & Reports</h3>
         <p class="service-desc">Insurance, pre-purchase, and annual condition inspections with professional written reports. Accepted by all major BC insurers and lenders. Includes drone imagery and thermal assessment on request.</p>
-        <a href="/roof-inspections" class="service-link">
-          Learn More
+        <a href="#roofle-quote" class="service-link">
+          Schedule Now
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
@@ -2500,40 +2568,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="gallery-grid reveal">
       <div class="gallery-item" style="grid-row:span 2;">
-        <img src="/wp1.jpg" alt="Aerial view of modern home with standing seam metal roof &mdash; Lower Mainland" loading="lazy">
-        <div class="gallery-item-label"><span>Standing Seam Metal Roof &mdash; Modern Home</span></div>
+        <img src="/drone-hero.jpg" alt="Aerial drone view of completed roof installation &mdash; Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Aerial View &mdash; Completed Roof Installation</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/wp2.jpg" alt="Aerial view of completed roof with rooftop deck &mdash; Lower Mainland" loading="lazy">
-        <div class="gallery-item-label"><span>Aerial View &mdash; Completed Roof &amp; Deck</span></div>
+        <img src="/drone-v2.jpg" alt="Drone aerial of residential roofing project &mdash; Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Drone Aerial &mdash; Residential Project</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/wp3.jpg" alt="Rooftop view at sunset with city skyline &mdash; Lower Mainland BC" loading="lazy">
-        <div class="gallery-item-label"><span>Golden Hour &mdash; Burnaby / Metrotown View</span></div>
+        <img src="/drone-aerial-1.jpg" alt="Roofing project aerial view &mdash; Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Aerial View &mdash; Project Site</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/wp4.jpg" alt="Dark architectural shingles ridge &mdash; city view in background" loading="lazy">
-        <div class="gallery-item-label"><span>Architectural Shingles &mdash; Ridge Detail</span></div>
+        <img src="/drone-aerial-3.jpg" alt="Overhead drone shot of Stonnex roofing installation" loading="lazy">
+        <div class="gallery-item-label"><span>Overhead View &mdash; Active Installation</span></div>
       </div>
       <div class="gallery-item">
-        <img src="/wp5.jpg" alt="VELUX skylight installation on dark shingle roof &mdash; blue sky" loading="lazy">
+        <img src="/drone-aerial-5.jpg" alt="Completed residential roofing &mdash; Lower Mainland BC" loading="lazy">
+        <div class="gallery-item-label"><span>Completed Residential Roof &mdash; Lower Mainland</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/drone-aerial-7.jpg" alt="Stonnex roofing project &mdash; aerial perspective" loading="lazy">
+        <div class="gallery-item-label"><span>Aerial Perspective &mdash; Stonnex Project</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/img-10.jpg" alt="Modern Standing Seam Metal Roof &mdash; West Vancouver" loading="lazy">
+        <div class="gallery-item-label"><span>Standing Seam Metal Roof &mdash; West Vancouver</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/img-11.jpg" alt="Architectural Shingle Replacement &mdash; Lower Mainland" loading="lazy">
+        <div class="gallery-item-label"><span>Architectural Shingle Replacement</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="/img-13.jpg" alt="VELUX Skylight Installation &mdash; North Vancouver" loading="lazy">
         <div class="gallery-item-label"><span>VELUX Skylight Installation &mdash; North Vancouver</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/wp6.jpg" alt="Skylight installation with architectural trim detail" loading="lazy">
-        <div class="gallery-item-label"><span>Skylight &amp; Flashing Detail Work</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/wp7.jpg" alt="Standing seam metal roof installation in progress" loading="lazy">
-        <div class="gallery-item-label"><span>Standing Seam Metal &mdash; Installation</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/wp8.jpg" alt="Standing seam metal roof with Fraser Valley view" loading="lazy">
-        <div class="gallery-item-label"><span>Standing Seam Metal &mdash; Fraser Valley</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="/wp9.jpg" alt="Dark architectural shingles at dusk &mdash; Lower Mainland" loading="lazy">
-        <div class="gallery-item-label"><span>Architectural Shingles &mdash; Completed Project</span></div>
       </div>
     </div>
 
@@ -2693,12 +2761,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <div class="footer-col-title">Services</div>
         <ul class="footer-links">
-          <li><a href="/residential-roofing">Residential Roofing</a></li>
-          <li><a href="/roof-repairs">Roof Repairs</a></li>
-          <li><a href="/flat-roofing">Flat &amp; Torch-On</a></li>
-          <li><a href="/roof-inspections">Roof Inspections</a></li>
-          <li><a href="/reroofing">Reroofing</a></li>
-          <li><a href="/#services">Gutters &amp; Skylights</a></li>
+          <li><a href="#services">Roof Replacement</a></li>
+          <li><a href="#services">Roof Repairs</a></li>
+          <li><a href="#services">Flat & Torch-On</a></li>
+          <li><a href="#services">Roof Inspections</a></li>
+          <li><a href="#services">Gutters & Drainage</a></li>
+          <li><a href="#services">Skylights</a></li>
         </ul>
       </div>
       <div>
