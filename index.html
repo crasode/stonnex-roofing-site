@@ -91,10 +91,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Prevent Roofle slide-out widget from causing horizontal overflow on mobile */
-  .slide-out-widget-wrapper { max-width: 100vw; }
+  /* Hide Roofle slide-out tab on mobile — embedded widget + sticky CTA bar cover the conversion path */
   @media (max-width: 900px) {
-    .slide-out-widget-wrapper { overflow: hidden; }
+    .slide-out-widget-wrapper { display: none !important; }
   }
 
   /* &#9472;&#9472;&#9472; NAVIGATION &#9472;&#9472;&#9472; */
