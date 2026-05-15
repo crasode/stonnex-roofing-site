@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.stonnex.com/sitemap.xml
+Sitemap: https://stonnex.com/sitemap.xml
