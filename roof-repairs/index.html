@@ -2250,5 +2250,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   });
 </script>
+
+<script>
+(function(){
+  var form = document.getElementById('service-lead-form');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('[type="submit"]');
+    var orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    var data = new FormData(form);
+    fetch('https://formspree.io/f/meenyezn', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res) {
+      if (res.ok) {
+        window.location.href = '/thankyou';
+      } else {
+        btn.disabled = false;
+        btn.textContent = orig;
+        alert('Something went wrong. Please try again or call us at 604-935-6976.');
+      }
+    }).catch(function() {
+      btn.disabled = false;
+      btn.textContent = orig;
+      alert('Something went wrong. Please try again or call us at 604-935-6976.');
+    });
+  });
+})();
+</script>
 </body>
 </html>
