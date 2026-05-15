@@ -322,7 +322,7 @@ src="https://www.facebook.com/tr?id=806967639113453&ev=PageView&noscript=1"
     margin: 0 auto;
     padding: 0 48px;
     padding-top: calc(84px + 10vh);
-    padding-bottom: 120px;
+    padding-bottom: 180px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 420px;
@@ -1406,7 +1406,7 @@ src="https://www.facebook.com/tr?id=806967639113453&ev=PageView&noscript=1"
 
   .quote-trust-list li svg { color: var(--gold); flex-shrink: 0; }
 
-  /* Legacy form step styles removed &mdash; using FormSubmit.co inline form */
+  /* Legacy form step styles removed */
 
   @media (max-width: 900px) {
     .commercial-banner-inner { grid-template-columns: 1fr; }
@@ -2876,7 +2876,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-bottom-links">
         <a href="/privacy-policy">Privacy Policy</a>
         <a href="/terms-of-service">Terms of Service</a>
-        <a href="#">Warranty Info</a>
       </div>
     </div>
   </div>
@@ -2909,7 +2908,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   revealEls.forEach(el => observer.observe(el));
 
   // &#9472;&#9472;&#9472; UTM PARAMETER CAPTURE &#9472;&#9472;&#9472;
-  // Appends UTM values as hidden fields so FormSubmit includes them in the email
+  // Appends UTM values as hidden fields so they are captured in form submissions
   (function() {
     const params = new URLSearchParams(window.location.search);
     const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'];
