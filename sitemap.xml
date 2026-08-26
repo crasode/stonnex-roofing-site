@@ -29,6 +29,8 @@
 
   <url><loc>https://stonnex.com/brava-cedar-shake</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
+  <url><loc>https://stonnex.com/warranty</loc><lastmod>2026-08-26</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+
   <!-- Legal Pages -->
   <url><loc>https://stonnex.com/privacy-policy</loc><lastmod>2026-05-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://stonnex.com/terms-of-service</loc><lastmod>2026-05-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
