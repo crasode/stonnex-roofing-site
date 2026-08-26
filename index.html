@@ -2282,6 +2282,26 @@ src="https://www.facebook.com/tr?id=806967639113453&ev=PageView&noscript=1"
 <style>
 .estimate-intro{max-width:520px;margin:14px auto 0;font-family:'Inter',system-ui,sans-serif;
   font-size:14px;line-height:1.7;color:#6b7280;text-align:center;font-weight:300;}</style>
+<style>
+.trustbar-section{background:#fff;border-top:1px solid #e5e0d8;border-bottom:1px solid #e5e0d8;}
+.trustbar{max-width:1100px;margin:0 auto;display:flex;align-items:stretch;flex-wrap:wrap;}
+.trustbar-item{flex:1 1 0;min-width:170px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;padding:30px 20px;text-decoration:none;
+  border-right:1px solid #e5e0d8;transition:background .18s;}
+.trustbar-item:last-child{border-right:0;}
+.trustbar-item:hover{background:#faf7f2;}
+.trustbar-item:focus-visible{outline:2px solid var(--gold,#a0793d);outline-offset:-2px;}
+.trustbar-item img{width:auto;height:auto;max-height:74px;max-width:100%;object-fit:contain;display:block;}
+.trustbar-label{font-family:'Inter',system-ui,sans-serif;font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;font-weight:600;color:#6b7280;text-align:center;}
+.trustbar-item:hover .trustbar-label{color:var(--gold,#a0793d);}
+@media (max-width:820px){
+  .trustbar-item{flex:1 1 50%;min-width:50%;border-bottom:1px solid #e5e0d8;padding:26px 16px;}
+  .trustbar-item:nth-child(2n){border-right:0;}
+  .trustbar-item:nth-last-child(-n+2){border-bottom:0;}
+  .trustbar-item img{max-height:62px;}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -2474,26 +2494,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- BBB ACCREDITATION & ICBA MEMBERSHIP -->
-<section style="background:#fff;border-bottom:1px solid rgba(0,0,0,0.06);">
-  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;flex-wrap:wrap;">
-    <div style="display:flex;align-items:center;gap:32px;flex:1;min-width:280px;padding:40px 24px;border-right:1px solid #e5e0d8;box-sizing:border-box;">
-      <a href="https://www.bbb.org/ca/bc/langley/profile/roofing-contractors/stonnex-roofing-0037-2438361/#sealclick" target="_blank" rel="nofollow" style="flex-shrink:0;display:block;">
-        <img width="160" height="82" loading="lazy" decoding="async" src="https://seal-mbc.bbb.org/seals/black-seal-160-82-bbb-2438361.png" style="border:0;" alt="Stonnex Roofing BBB Business Review" />
-      </a>
-      <div>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:#1e2530;margin:0 0 6px;line-height:1.3;">BBB Accredited Business</p>
-        <p style="font-family:'Inter',sans-serif;font-size:0.875rem;color:#6b7280;margin:0;line-height:1.6;max-width:360px;">Stonnex Roofing is an accredited member of the Better Business Bureau &mdash; a recognized standard of trust for homeowners across British Columbia.</p>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;gap:24px;flex:1;min-width:280px;padding:40px 24px;box-sizing:border-box;">
-      <a href="https://icba.ca" target="_blank" rel="noopener" style="flex-shrink:0;display:block;">
-        <img src="https://icba.ca/hubfs/341692513/ICBA%20Logo%20-%20RGB%20-%20Primary.png" style="border:0;height:64px;width:auto;display:block;" alt="ICBA Member — Independent Contractors and Businesses Association of BC" />
-      </a>
-      <div>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:#1e2530;margin:0 0 6px;line-height:1.3;">ICBA Member</p>
-        <p style="font-family:'Inter',sans-serif;font-size:0.875rem;color:#6b7280;margin:0;line-height:1.6;max-width:360px;">Stonnex Roofing is a proud member of the Independent Contractors and Businesses Association of BC &mdash; an organization that sets the standard for construction safety, certified workforce training, and professional accountability in BC’s construction industry.</p>
-      </div>
-    </div>
+<!-- TRUST BAR -->
+<section class="trustbar-section">
+  <div class="trustbar">
+    <a class="trustbar-item" href="/gaf-certified">
+      <img src="/gaf-certified-badge.png" width="400" height="400" alt="GAF Certified Residential Roofing Contractor" loading="lazy" decoding="async">
+      <span class="trustbar-label">GAF Certified</span>
+    </a>
+    <a class="trustbar-item" href="/brava-cedar-shake">
+      <img src="/brava/brava-preferred-badge.png" width="260" height="250" alt="Brava Preferred Contractor" loading="lazy" decoding="async">
+      <span class="trustbar-label">Brava Preferred</span>
+    </a>
+    <a class="trustbar-item" href="https://icba.ca" target="_blank" rel="noopener">
+      <img src="https://icba.ca/hubfs/341692513/ICBA%20Logo%20-%20RGB%20-%20Primary.png" alt="ICBA Member &mdash; Independent Contractors and Businesses Association of BC" loading="lazy" decoding="async">
+      <span class="trustbar-label">ICBA Member</span>
+    </a>
+    <a class="trustbar-item" href="https://www.bbb.org/ca/bc/langley/profile/roofing-contractors/stonnex-roofing-0037-2438361/#sealclick" target="_blank" rel="nofollow">
+      <img width="160" height="82" src="https://seal-mbc.bbb.org/seals/black-seal-160-82-bbb-2438361.png" alt="Stonnex Roofing BBB Business Review" loading="lazy" decoding="async">
+      <span class="trustbar-label">BBB Accredited</span>
+    </a>
   </div>
 </section>
 
