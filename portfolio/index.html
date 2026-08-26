@@ -370,6 +370,20 @@ window.addEventListener('load', function() {
 .footer-legal p:last-child{margin-bottom:0;}
 .footer-legal a{color:inherit;text-decoration:underline;}
 </style>
+<style>
+.ba-section{padding:76px 24px;background:#fff;border-top:1px solid #e5e0d8;}
+.ba-wrap{max-width:1200px;margin:0 auto;}
+.ba-eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#a0793d;margin:0 0 12px;}
+.ba-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(28px,3.4vw,42px);font-weight:400;line-height:1.15;color:#1e2530;margin:0 0 10px;}
+.ba-lead{font-size:16px;line-height:1.8;font-weight:300;color:#5c6470;max-width:68ch;margin:0 0 34px;}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.ba-fig{margin:0;}
+.ba-fig img{width:100%;height:auto;display:block;border-radius:3px;}
+.ba-tag{display:inline-block;margin:12px 0 0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:2px;}
+.ba-tag.before{background:#efece6;color:#6b7280;}
+.ba-tag.after{background:#1e2530;color:#fff;}
+@media (max-width:760px){.ba-grid{grid-template-columns:1fr;}.ba-section{padding:56px 18px;}}
+</style>
 </head>
 <body>
 
@@ -408,7 +422,28 @@ window.addEventListener('load', function() {
     <h2 class="section-title">Residential Roofing<br><em>Projects</em></h2>
     <p style="font-size:16px;color:var(--text-mid);font-weight:300;line-height:1.7;max-width:560px;">Real work by our team across Surrey, Langley, Burnaby, and Metro Vancouver. Click any photo to view full size.</p>
 
-    <div class="gallery-grid" id="jobGallery">
+    <!-- BEFORE / AFTER -->
+<section class="ba-section">
+  <div class="ba-wrap">
+    <p class="ba-eyebrow">Before &amp; After</p>
+    <h2 class="ba-title">Eagle Mountain</h2>
+    <p class="ba-lead">A full tear-off and asphalt shingle replacement on a large multi-hip roof. Same house, same angle, photographed before we started and again on completion.</p>
+    <div class="ba-grid">
+      <figure class="ba-fig">
+        <img width="1600" height="900" src="/portfolio-35.webp" loading="lazy" decoding="async"
+             alt="Eagle Mountain home before reroofing — aged, weathered asphalt shingle roof seen from above">
+        <span class="ba-tag before">Before</span>
+      </figure>
+      <figure class="ba-fig">
+        <img width="1600" height="900" src="/portfolio-34.webp" loading="lazy" decoding="async"
+             alt="The same Eagle Mountain home after reroofing by Stonnex — new asphalt shingle roof seen from above">
+        <span class="ba-tag after">After</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="gallery-grid" id="jobGallery">
       <div class="gallery-item tall" onclick="openLightbox(0)">
         <img width="900" height="1200" src="/portfolio-7.webp" alt="Residential reroofing project Lower Mainland BC" loading="lazy">
       </div>
@@ -464,7 +499,7 @@ window.addEventListener('load', function() {
         <img width="900" height="1200" src="/portfolio-9.webp" alt="Reroofing project completed Lower Mainland" loading="lazy">
       </div>
 <div class="gallery-item" onclick="openLightbox(18)">
-<img width="1600" height="900" src="/portfolio-34.webp" alt="Completed asphalt shingle roof replacement viewed from above &mdash; Lower Mainland BC" loading="lazy">
+<img width="1600" height="950" src="/portfolio-36.webp" alt="Standing seam metal roof with skylights, completed installation &mdash; Lower Mainland BC" loading="lazy">
 </div>
     </div>
   </div>
@@ -591,7 +626,7 @@ const galleryImages = [
   '/portfolio-24.webp', '/portfolio-13.webp', '/portfolio-29.webp',
   '/portfolio-14.webp', '/portfolio-17.webp', '/portfolio-32.webp',
   '/portfolio-12.webp', '/portfolio-26.webp', '/portfolio-9.webp',
-  '/portfolio-34.webp'
+  '/portfolio-36.webp'
 ];
 let currentIndex = 0;
 
