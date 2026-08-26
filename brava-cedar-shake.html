@@ -646,7 +646,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
   <div class="wrap">
     <a href="https://stonnex.com" class="logo">
-      <img src="https://stonnex.com/logo-black.svg" alt="Stonnex Roofing" onerror="this.style.display='none';this.parentNode.insertAdjacentText('beforeend','Stonnex')">
+      <img src="/logo-black.svg" alt="Stonnex Roofing" onerror="this.style.display='none';this.parentNode.insertAdjacentText('beforeend','Stonnex')">
     </a>
     <nav class="main-nav">
       <div class="dropdown">
@@ -717,12 +717,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="lead-card">
         <h3>Get Your Free Inspection</h3>
         <div class="lead-sub">Takes 30 seconds &mdash; no obligation</div>
-        <form action="https://stonnex.com/#contact" method="get" onsubmit="window.location.href='mailto:info@stonnex.com?subject=Brava%20Cedar%20Shake%20Inspection%20Request&body='+encodeURIComponent('Name: '+this.n.value+'\nPhone: '+this.p.value+'\nProperty: '+this.a.value+'\nInterested in: Brava composite cedar shake'); return false;">
-          <input name="n" type="text" placeholder="Your name" required>
-          <input name="p" type="tel" placeholder="Phone number" required>
-          <input name="a" type="text" placeholder="Property address or city" required>
-          <button type="submit" class="btn">Book My Free Inspection</button>
-        </form>
+        <form action="https://formspree.io/f/meenyezn" method="POST" id="brava-lead-form">
+        <input type="hidden" name="_subject" value="Brava Cedar Shake Page Lead - Stonnex.com">
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="service_interest" value="Brava Composite Cedar Shake">
+        <input name="name" type="text" placeholder="Your name" required>
+        <input name="phone" type="tel" placeholder="Phone number" required>
+        <input name="address" type="text" placeholder="Property address or city" required>
+        <button type="submit" class="btn">Book My Free Inspection</button>
+      </form>
         <div class="lead-note">No obligation &middot; Respond within one business day &middot; <a href="https://stonnex.com/#roofle-quote">Prefer an Instant Estimate?</a></div>
       </div>
     </div>
