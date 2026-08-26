@@ -340,7 +340,14 @@
 
 <div class="content-wrap">
 
-  <!-- GAF-BADGE-SLOT -->
+  <!-- Badge appears automatically once /gaf-certified-badge.png exists in the repo root.
+       Until then onerror hides it, so no broken-image icon is ever shown. -->
+  <div class="gaf-badge-wrap">
+    <img src="/gaf-certified-badge.png" width="200" height="200"
+         alt="GAF Certified Residential Roofing Contractor"
+         loading="lazy" decoding="async"
+         onerror="this.closest('.gaf-badge-wrap').style.display='none';">
+  </div>
 
   <div class="highlight-box">
     <p>Stonnex Roofing is a <strong>GAF Certified Residential Roofing Contractor</strong>. GAF is North America's largest roofing manufacturer, and the certification is granted by GAF, not by us. It is checkable, and it is the reason we can register manufacturer warranties on the roofs we install.</p>
