@@ -93,8 +93,11 @@ window.addEventListener('load', function() {
   .page-hero::before {
     content: '';
     position: absolute; inset: 0;
-    background: url('/drone-hero.webp') center/cover no-repeat;
+    background: url('/drone-hero-bg.webp') center/cover no-repeat;
     opacity: 0.18;
+  }
+  @media (max-width: 800px) {
+    .page-hero::before { background-image: url('/drone-hero-bg-mobile.webp'); }
   }
   .page-hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
   .page-hero .eyebrow {
@@ -399,58 +402,58 @@ window.addEventListener('load', function() {
 
     <div class="gallery-grid" id="jobGallery">
       <div class="gallery-item tall" onclick="openLightbox(0)">
-        <img src="/portfolio-7.webp" alt="Residential reroofing project Lower Mainland BC" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-7.webp" alt="Residential reroofing project Lower Mainland BC" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(1)">
-        <img src="/portfolio-1.webp" alt="Asphalt shingle installation Lower Mainland" loading="lazy">
+        <img width="1200" height="900" src="/portfolio-1.webp" alt="Asphalt shingle installation Lower Mainland" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(2)">
-        <img src="/portfolio-2.webp" alt="Roof replacement Metro Vancouver" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-2.webp" alt="Roof replacement Metro Vancouver" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(3)">
-        <img src="/portfolio-4.webp" alt="New roofing installation Langley BC" loading="lazy">
+        <img width="1200" height="903" src="/portfolio-4.webp" alt="New roofing installation Langley BC" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(4)">
-        <img src="/portfolio-5.webp" alt="Reroofing project Surrey BC" loading="lazy">
+        <img width="1200" height="900" src="/portfolio-5.webp" alt="Reroofing project Surrey BC" loading="lazy">
       </div>
       <div class="gallery-item tall" onclick="openLightbox(5)">
-        <img src="/portfolio-27.webp" alt="Residential roof replacement Burnaby" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-27.webp" alt="Residential roof replacement Burnaby" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(6)">
-        <img src="/portfolio-6.webp" alt="Shingle roofing North Vancouver" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-6.webp" alt="Shingle roofing North Vancouver" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(7)">
-        <img src="/portfolio-15.webp" alt="Roofing contractor Lower Mainland" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-15.webp" alt="Roofing contractor Lower Mainland" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(8)">
-        <img src="/portfolio-22.webp" alt="Roof installation Coquitlam BC" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-22.webp" alt="Roof installation Coquitlam BC" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(9)">
-        <img src="/portfolio-24.webp" alt="Reroofing Richmond BC" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-24.webp" alt="Reroofing Richmond BC" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(10)">
-        <img src="/portfolio-13.webp" alt="Residential roofing Vancouver" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-13.webp" alt="Residential roofing Vancouver" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(11)">
-        <img src="/portfolio-29.webp" alt="Roof repair Abbotsford BC" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-29.webp" alt="Roof repair Abbotsford BC" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(12)">
-        <img src="/portfolio-14.webp" alt="New shingles installed Lower Mainland" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-14.webp" alt="New shingles installed Lower Mainland" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(13)">
-        <img src="/portfolio-17.webp" alt="Roofing crew at work Metro Vancouver" loading="lazy">
+        <img width="675" height="1200" src="/portfolio-17.webp" alt="Roofing crew at work Metro Vancouver" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(14)">
-        <img src="/portfolio-32.webp" alt="Completed reroofing Surrey" loading="lazy">
+        <img width="1200" height="900" src="/portfolio-32.webp" alt="Completed reroofing Surrey" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(15)">
-        <img src="/portfolio-12.webp" alt="Asphalt shingles Langley BC" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-12.webp" alt="Asphalt shingles Langley BC" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(16)">
-        <img src="/portfolio-26.webp" alt="Residential roof work Burnaby BC" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-26.webp" alt="Residential roof work Burnaby BC" loading="lazy">
       </div>
       <div class="gallery-item" onclick="openLightbox(17)">
-        <img src="/portfolio-9.webp" alt="Reroofing project completed Lower Mainland" loading="lazy">
+        <img width="900" height="1200" src="/portfolio-9.webp" alt="Reroofing project completed Lower Mainland" loading="lazy">
       </div>
     </div>
   </div>
@@ -464,14 +467,14 @@ window.addEventListener('load', function() {
     <p style="font-size:16px;color:var(--text-mid);font-weight:300;line-height:1.7;max-width:560px;">Drone photography of finished projects showing full roof scope and surrounding property.</p>
 
     <div class="drone-grid">
-      <div class="drone-item"><img src="/drone-aerial-1.webp" alt="Drone view completed roof Lower Mainland" loading="lazy"></div>
-      <div class="drone-item"><img src="/drone-aerial-2.webp" alt="Aerial roof replacement Metro Vancouver" loading="lazy"></div>
-      <div class="drone-item"><img src="/drone-aerial-3.webp" alt="Drone aerial roofing project BC" loading="lazy"></div>
-      <div class="drone-item"><img src="/drone-aerial-4.webp" alt="Completed reroof from above Lower Mainland" loading="lazy"></div>
-      <div class="drone-item"><img src="/drone-aerial-5.webp" alt="Roof drone photo Surrey BC" loading="lazy"></div>
-      <div class="drone-item"><img src="/drone-aerial-6.webp" alt="Aerial reroofing North Vancouver" loading="lazy"></div>
-      <div class="drone-item"><img src="/drone-aerial-7.webp" alt="Drone view residential roof Burnaby" loading="lazy"></div>
-      <div class="drone-item"><img src="/drone-aerial-8.webp" alt="Aerial view new shingles Langley BC" loading="lazy"></div>
+      <div class="drone-item"><img width="1400" height="788" src="/drone-aerial-1.webp" alt="Drone view completed roof Lower Mainland" loading="lazy"></div>
+      <div class="drone-item"><img width="1400" height="788" src="/drone-aerial-2.webp" alt="Aerial roof replacement Metro Vancouver" loading="lazy"></div>
+      <div class="drone-item"><img width="1400" height="788" src="/drone-aerial-3.webp" alt="Drone aerial roofing project BC" loading="lazy"></div>
+      <div class="drone-item"><img width="1400" height="788" src="/drone-aerial-4.webp" alt="Completed reroof from above Lower Mainland" loading="lazy"></div>
+      <div class="drone-item"><img width="787" height="1400" src="/drone-aerial-5.webp" alt="Roof drone photo Surrey BC" loading="lazy"></div>
+      <div class="drone-item"><img width="1400" height="788" src="/drone-aerial-6.webp" alt="Aerial reroofing North Vancouver" loading="lazy"></div>
+      <div class="drone-item"><img width="1400" height="788" src="/drone-aerial-7.webp" alt="Drone view residential roof Burnaby" loading="lazy"></div>
+      <div class="drone-item"><img width="787" height="1400" src="/drone-aerial-8.webp" alt="Aerial view new shingles Langley BC" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -508,6 +511,7 @@ window.addEventListener('load', function() {
         <li><a href="/roof-repairs/">Roof Repairs</a></li>
         <li><a href="/roof-inspections/">Roof Inspections</a></li>
         <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/brava-cedar-shake">Brava Composite Shake</a></li>
       </ul>
     </div>
     <div>
@@ -545,7 +549,7 @@ window.addEventListener('load', function() {
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
   <button class="lightbox-close" onclick="closeLightboxDirect()">&times;</button>
   <button class="lightbox-nav lightbox-prev" onclick="prevImage(event)">&#8249;</button>
-  <img id="lightboxImg" src="" alt="">
+  <img loading="lazy" decoding="async" id="lightboxImg" src="" alt="">
   <button class="lightbox-nav lightbox-next" onclick="nextImage(event)">&#8250;</button>
 </div>
 
