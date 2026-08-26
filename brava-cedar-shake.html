@@ -622,6 +622,34 @@ footer a:hover { color: var(--gold); }
 .footer-legal p:last-child{margin-bottom:0;}
 .footer-legal a{color:inherit;text-decoration:underline;}
 </style>
+<style>
+.before-gallery{background:var(--white,#fff);}
+.before-lead{max-width:70ch;margin:18px 0 0;font-size:16.5px;line-height:1.8;color:var(--body,#4a5260);}
+/* if none of the before images resolve, the whole section removes itself */
+.before-gallery.is-empty{display:none;}
+</style>
+<script>
+/* Placeholder slots hide themselves until their image file exists.
+   loading="lazy" means a below-the-fold <img> is never fetched, so an inline
+   onerror never fires - probe each src explicitly instead. */
+(function(){
+  function prune(){
+    var slots=document.querySelectorAll('.g-item img[src^="/brava/before-"], .g-item img[src^="/brava/detail-"]');
+    Array.prototype.forEach.call(slots,function(img){
+      var probe=new Image();
+      probe.onerror=function(){
+        var item=img.closest('.g-item');
+        if(item) item.style.display='none';
+        var sec=document.getElementById('before');
+        if(sec && !sec.querySelector('.g-item:not([style*="none"])')) sec.style.display='none';
+      };
+      probe.src=img.getAttribute('src');
+    });
+  }
+  if(document.readyState!=='loading') prune();
+  else document.addEventListener('DOMContentLoaded',prune);
+})();
+</script>
 </head>
 <body>
 
@@ -856,6 +884,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- GALLERY -->
+<!-- BEFORE: the original cedar shake roof on the same property.
+     Each tile hides itself until the matching file is uploaded to /brava/,
+     and the whole section hides if none of them are present. -->
+<section class="gallery before-gallery" id="before">
+  <div class="wrap">
+    <div class="eyebrow">Before</div>
+    <h2 class="section-h">What This Roof Looked Like <em>Before Brava</em></h2>
+    <p class="before-lead">Real cedar on a West Side estate at the end of its service life &mdash; split, cupped and moss-darkened after decades of Lower Mainland rain. The homeowner wanted the same hand-split character without going through it again in twenty years. These are the shots from our inspection, before tear-off.</p>
+    <div class="gallery-grid">
+      <div class="g-item wide">
+        <img src="/brava/before-1.jpg" loading="lazy" decoding="async"
+             alt="Weathered cedar shake roof before replacement — French-style estate, front elevation">
+        <div class="g-caption">Original cedar shake &mdash; front elevation</div>
+      </div>
+      <div class="g-item">
+        <img src="/brava/before-2.jpg" loading="lazy" decoding="async"
+             alt="Aerial view of the aged cedar shake roof showing moss darkening and wear across the main hip">
+        <div class="g-caption">Aerial &mdash; wear across the main hip</div>
+      </div>
+      <div class="g-item">
+        <img src="/brava/before-3.jpg" loading="lazy" decoding="async"
+             alt="Overhead view of the original cedar shake roof, dormers and multiple chimneys before replacement">
+        <div class="g-caption">Overhead &mdash; dormers and chimney details</div>
+      </div>
+      <div class="g-item">
+        <img src="/brava/before-4.jpg" loading="lazy" decoding="async"
+             alt="Rear elevation of the property showing the aged cedar shake roof before Brava installation">
+        <div class="g-caption">Rear elevation &mdash; before tear-off</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="gallery" id="gallery">
   <div class="wrap">
     <div class="eyebrow">Our Work</div>
@@ -896,7 +957,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
              alt="Brava synthetic cedar shake — estate home, Lower Mainland BC">
         <div class="g-caption">Estate Installation &mdash; Lower Mainland</div>
       </div>
-    </div>
+      <div class="g-item">
+        <img src="/brava/detail-1.jpg" loading="lazy" decoding="async"
+             alt="Close-up of installed Brava composite cedar shake showing hand-split texture, hip cap and dormer detail">
+        <div class="g-caption">Brava profile &mdash; hip cap and dormer detail</div>
+      </div>
+      <div class="g-item">
+        <img src="/brava/detail-2.jpg" loading="lazy" decoding="async"
+             alt="Brava composite cedar shake roof detail — ridge and hip lines across a steep-pitch dormer">
+        <div class="g-caption">Ridge and hip lines &mdash; steep-pitch dormer</div>
+      </div>
+      </div>
   </div>
 </section>
 
