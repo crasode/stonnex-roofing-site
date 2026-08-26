@@ -93,8 +93,11 @@ window.addEventListener('load', function() {
   .page-hero::before {
     content: '';
     position: absolute; inset: 0;
-    background: url('/drone-hero.webp') center/cover no-repeat;
+    background: url('/drone-hero-bg.webp') center/cover no-repeat;
     opacity: 0.18;
+  }
+  @media (max-width: 800px) {
+    .page-hero::before { background-image: url('/drone-hero-bg-mobile.webp'); }
   }
   .page-hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
   .page-hero .eyebrow {

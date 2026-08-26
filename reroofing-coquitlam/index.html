@@ -39,7 +39,8 @@ src="https://www.facebook.com/tr?id=806967639113453&ev=PageView&noscript=1"
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preload" as="image" href="/drone-hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/drone-hero-bg.webp" media="(min-width: 801px)" fetchpriority="high">
+<link rel="preload" as="image" href="/drone-hero-bg-mobile.webp" media="(max-width: 800px)" fetchpriority="high">
 <title>Reroofing Coquitlam | Full Roof Replacement | Stonnex Roofing</title>
 <meta name="description" content="Expert reroofing in Coquitlam, BC. Full tear-off and replacement with asphalt, metal, or cedar. Written warranty. Free inspection. Call 604-935-6976.">
 <meta property="og:title" content="Reroofing Coquitlam | Full Roof Replacement | Stonnex Roofing">
@@ -192,9 +193,12 @@ src="https://www.facebook.com/tr?id=806967639113453&ev=PageView&noscript=1"
     inset: 0;
     filter: blur(3px) brightness(0.7);
     transform: scale(1.04);
-    background-image: url('/drone-hero.webp');
+    background-image: url('/drone-hero-bg.webp');
     background-size: cover;
     background-position: center 40%;
+  }
+  @media (max-width: 800px) {
+    .hero-bg { background-image: url('/drone-hero-bg-mobile.webp'); }
   }
   .hero-bg::after {
     content: '';
@@ -2042,7 +2046,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg" style="background-image:url('/drone-hero.webp');"></div>
+  <div class="hero-bg" style="background-image:url('/drone-hero-bg.webp');"></div>
   <div class="hero-accent"></div>
   <div class="hero-line"></div>
   <div class="hero-content">
