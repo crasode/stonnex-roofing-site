@@ -1666,6 +1666,13 @@ src="https://www.facebook.com/tr?id=806967639113453&ev=PageView&noscript=1"
       display: block;
     }
     .nav-dropdown { position: static; box-shadow: none; display: block; opacity: 1; visibility: visible; background: #f8f6f2; padding: 4px 0; }
+  /* desktop centres the dropdown with transform: translateX(-50%). On mobile the
+     rule above switches to position:static, which cancels `left` but NOT the
+     transform - leaving the panel shifted half its width off-screen. */
+  .nav-dropdown { transform: none; }
+  .nav-dropdown::before { display: none; }
+  .nav-dropdown.wide { display: block; min-width: 0; }
+  .has-dropdown .nav-dropdown.wide { display: block; }
     .nav-dropdown a { padding: 10px 36px; font-size: 14px; color: #555; }
     .has-dropdown > a::after { content: none; }
     .hero-content { padding: 0 24px; padding-top: 100px; padding-bottom: 100px; grid-template-columns: 1fr; }
