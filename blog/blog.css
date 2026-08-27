@@ -82,3 +82,21 @@ footer{background:var(--slate);color:rgba(255,255,255,0.7);padding:64px 0 32px;m
 .footer-bottom p{font-size:13px}
 .footer-bottom-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;margin-left:20px}
 @media(max-width:760px){.footer-inner{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+
+/* Footer legal block */
+.footer-legal{max-width:78ch;margin:32px auto 0;padding-top:20px;
+  border-top:1px solid rgba(148,152,160,.32);font-size:12.5px;line-height:1.65;
+  color:rgba(255,255,255,.62);text-align:left;}
+.footer-legal p{margin:0 0 10px;color:inherit;}
+.footer-legal p:last-child{margin-bottom:0;}
+.footer-legal strong{color:rgba(255,255,255,.88);font-weight:600;}
+.footer-legal a{color:rgba(255,255,255,.85);text-decoration:underline;}
+.footer-legal a:hover{color:#fff;}
+
+/* End-of-post CTA */
+.post-cta{margin:44px 0 8px;padding:30px 32px;background:var(--white);
+  border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:4px;}
+.post-cta h3{margin:0 0 10px;font-size:21px;line-height:1.35;color:var(--slate);}
+.post-cta p{margin:0;color:var(--text-mid);}
+.post-cta a{color:var(--gold);font-weight:600;}
+@media (max-width:700px){.post-cta{padding:24px 22px;margin:34px 0 8px;}.post-cta h3{font-size:19px;}}

@@ -610,17 +610,32 @@ footer a:hover { color: var(--gold); }
 </style>
 <style>
 .footer-legal{max-width:78ch;margin:32px auto 0;padding-top:20px;
-  border-top:1px solid rgba(148,152,160,.32);font-size:12px;line-height:1.65;
-  opacity:.78;color:inherit;text-align:left;}
-.footer-legal p{margin:0 0 10px;}
+  border-top:1px solid rgba(148,152,160,.32);font-size:12.5px;line-height:1.65;
+  color:rgba(255,255,255,.62);text-align:left;}
+.footer-legal p{margin:0 0 10px;color:inherit;}
 .footer-legal p:last-child{margin-bottom:0;}
-.footer-legal a{color:inherit;text-decoration:underline;}
+.footer-legal strong{color:rgba(255,255,255,.88);font-weight:600;}
+.footer-legal a{color:rgba(255,255,255,.85);text-decoration:underline;}
+.footer-legal a:hover{color:#fff;}
 </style>
 <style>
 .before-gallery{background:var(--white,#fff);}
 .before-lead{max-width:70ch;margin:18px 0 0;font-size:16.5px;line-height:1.8;color:var(--body,#4a5260);}
 /* if none of the before images resolve, the whole section removes itself */
 .before-gallery.is-empty{display:none;}
+/* Further reading — internal links to Brava/cedar blog posts */
+.reading { padding: 90px 0; background: var(--cream); border-top: 1px solid var(--line); }
+.reading-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 38px; }
+.reading-card { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--line);
+  border-radius: 4px; padding: 28px 26px; transition: border-color .2s, transform .2s; }
+.reading-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.reading-card .rc-tag { display: block; font-size: 12px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--gold-dark); font-weight: 600; margin-bottom: 12px; }
+.reading-card h3 { font-size: 19px; line-height: 1.35; color: var(--ink); margin: 0 0 10px; font-weight: 600; }
+.reading-card p { font-size: 15px; line-height: 1.6; margin: 0 0 16px; flex: 1 1 auto; }
+.reading-card .rc-more { font-size: 14px; font-weight: 600; color: var(--gold-dark); }
+@media (max-width: 900px) { .reading-grid { grid-template-columns: 1fr; } .reading { padding: 60px 0; } }
+
 </style>
 <script>
 /* Placeholder slots hide themselves until their image file exists.
@@ -1011,6 +1026,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<section class="reading" id="reading">
+  <div class="wrap">
+    <div class="eyebrow">Further Reading</div>
+    <h2 class="section-h">Deciding Between <em>Cedar and Composite?</em></h2>
+    <div class="reading-grid">
+      <a class="reading-card" href="/blog/brava-vs-cedar-shake-bc/">
+        <span class="rc-tag">Comparison</span>
+        <h3>Brava Composite Shake vs Real Cedar</h3>
+        <p>Fire ratings, realistic lifespan in a wet coastal climate, maintenance and cost &mdash; plus where real cedar still wins.</p>
+        <span class="rc-more">Read the comparison &rarr;</span>
+      </a>
+      <a class="reading-card" href="/blog/cedar-shake-fire-rules-bc/">
+        <span class="rc-tag">Codes &amp; Fire Safety</span>
+        <h3>Cedar Shake Roofs and BC Fire Rules</h3>
+        <p>Class A, B and C roof fire ratings explained, and why municipalities keep tightening the rules on untreated wood shake.</p>
+        <span class="rc-more">Read the guide &rarr;</span>
+      </a>
+      <a class="reading-card" href="/blog/brava-roof-cost-metro-vancouver/">
+        <span class="rc-tag">Costs</span>
+        <h3>What Does a Brava Roof Cost Here?</h3>
+        <p>What actually drives the price of a composite shake roof in Metro Vancouver, and how to compare quotes on the same scope.</p>
+        <span class="rc-more">See the numbers &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CTA — same call/email card pattern as live contact -->
 <section class="cta" id="contact">
   <div class="wrap">
@@ -1099,7 +1141,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     See our <a href="/terms-of-service">Terms of Service</a> and
     <a href="/privacy-policy">Privacy Policy</a>.
   </p>
-  <p>&copy; 2026 Stonnex Construction Ltd. All rights reserved.</p>
 </div>
 </footer>
 
