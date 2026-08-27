@@ -60,7 +60,7 @@ h1.post-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:c
 .btn:hover{background:var(--gold-light)}
 
 /* Listing grid */
-.posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;padding:56px 0}
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:28px;padding:56px 0}
 .post-card{background:var(--white);border:1px solid var(--border);border-radius:6px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
 .post-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(30,37,48,.1)}
 .post-card-body{padding:26px 24px 28px}
