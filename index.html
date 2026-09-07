@@ -3439,10 +3439,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           event_category: 'contact_form',
           event_label: 'stonnex_contact_submission'
         });
-        // Fire Google Ads conversion &mdash; Replace AW-XXXXXXXXXX/YYYYY with your Conversion ID/Label
-        gtag('event', 'conversion', {
-          send_to: 'AW-XXXXXXXXXX/YYYYYYYYYY'
-        });
+        // Google Ads conversion. Disabled until a real Conversion ID/Label is
+        // set: firing a placeholder send_to records nothing and just adds noise.
+        // To enable, paste your ID/Label from Google Ads > Goals > Conversions
+        // (looks like AW-123456789/AbC-D_efGh12) and uncomment.
+        // gtag('event', 'conversion', { send_to: 'AW-XXXXXXXXXX/YYYYYYYYYY' });
       }
 
       // Clean URL so refresh doesn't re-fire
