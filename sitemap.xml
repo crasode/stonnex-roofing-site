@@ -61,6 +61,7 @@
   </url>
 
   <!-- Blog -->
+  <url><loc>https://stonnex.com/strata-roofing</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://stonnex.com/blog/</loc><lastmod>2026-08-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://stonnex.com/blog/brava-vs-cedar-shake-bc/</loc><lastmod>2026-08-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://stonnex.com/blog/cedar-shake-fire-rules-bc/</loc><lastmod>2026-08-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
