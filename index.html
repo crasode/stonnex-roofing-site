@@ -2455,6 +2455,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             btn.disabled = true;
             btn.textContent = 'Sending...';
             var data = new FormData(form);
+            /* Also write the lead into the Stonnex pipeline (CRM). Fire-and-forget:
+               the Formspree email above is untouched and never waits on this. */
+            try {
+              var qs = new URLSearchParams(location.search);
+              var crm = {
+                name: (data.get('first_name')||'') + ' ' + (data.get('last_name')||''),
+                phone: data.get('phone')||'', email: data.get('email')||'',
+                address: data.get('address')||'',
+                service: data.get('service')||'', message: data.get('message')||'',
+                page: location.pathname + location.search,
+                gclid: qs.get('gclid')||sessionStorage.getItem('sx_gclid')||'',
+                fbclid: qs.get('fbclid')||sessionStorage.getItem('sx_fbclid')||'',
+                company_website: data.get('_gotcha')||''
+              };
+              if (!crm.name.trim()) crm.name = data.get('name')||'';
+              fetch('https://stonnex-lead-intake.netlify.app/lead', {
+                method:'POST', headers:{'content-type':'application/json'},
+                body: JSON.stringify(crm)
+              }).catch(function(){});
+            } catch(e){}
+
             fetch('https://formspree.io/f/meenyezn', {
               method: 'POST',
               body: data,
@@ -3214,6 +3235,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             btn.disabled = true;
             btn.textContent = 'Sending...';
             var data = new FormData(form);
+            /* Also write the lead into the Stonnex pipeline (CRM). Fire-and-forget:
+               the Formspree email above is untouched and never waits on this. */
+            try {
+              var qs = new URLSearchParams(location.search);
+              var crm = {
+                name: (data.get('first_name')||'') + ' ' + (data.get('last_name')||''),
+                phone: data.get('phone')||'', email: data.get('email')||'',
+                address: data.get('address')||'',
+                service: data.get('service')||'', message: data.get('message')||'',
+                page: location.pathname + location.search,
+                gclid: qs.get('gclid')||sessionStorage.getItem('sx_gclid')||'',
+                fbclid: qs.get('fbclid')||sessionStorage.getItem('sx_fbclid')||'',
+                company_website: data.get('_gotcha')||''
+              };
+              if (!crm.name.trim()) crm.name = data.get('name')||'';
+              fetch('https://stonnex-lead-intake.netlify.app/lead', {
+                method:'POST', headers:{'content-type':'application/json'},
+                body: JSON.stringify(crm)
+              }).catch(function(){});
+            } catch(e){}
+
             fetch('https://formspree.io/f/meenyezn', {
               method: 'POST',
               body: data,
@@ -3519,6 +3561,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   evs.forEach(function(ev){ window.addEventListener(ev, loadRoofle, { passive: true }); });
   if (location.hash === '#roofle-quote') loadRoofle();
 })();
+</script>
+<script>
+/* Keep gclid/fbclid for CRM attribution while the visitor browses */
+try {
+  var _q = new URLSearchParams(location.search);
+  if (_q.get('gclid')) sessionStorage.setItem('sx_gclid', _q.get('gclid'));
+  if (_q.get('fbclid')) sessionStorage.setItem('sx_fbclid', _q.get('fbclid'));
+} catch(e){}
 </script>
 </body>
 </html>
