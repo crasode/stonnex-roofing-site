@@ -25,7 +25,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"></noscript>
 
 <!-- Google tag (gtag.js) -->
-<!-- Standalone gtag removed: GTM-5QSM524G already loads G-KYBCJ89PJ8 and AW-17995834172 (verified in network log). Verify GA4 real-time after deploy. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KYBCJ89PJ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KYBCJ89PJ8');
+</script>
 <!-- Meta Pixel Code (deferred) -->
 <script>
 window.addEventListener('load', function() {
