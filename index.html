@@ -25,13 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"></noscript>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KYBCJ89PJ8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KYBCJ89PJ8');
-</script>
+<!-- Standalone gtag removed: GTM-5QSM524G already loads G-KYBCJ89PJ8 and AW-17995834172 (verified in network log). Verify GA4 real-time after deploy. -->
 <!-- Meta Pixel Code (deferred) -->
 <script>
 window.addEventListener('load', function() {
@@ -2092,7 +2086,7 @@ src="https://www.facebook.com/tr?id=806967639113453&ev=PageView&noscript=1"
   #mainNav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 </style>
-<script src="https://app.roofle.com/roof-quote-pro-widget.js?id=BcZ84ee4Bj5-sAtZot4pJ" async></script>
+<!-- Roofle slide-out widget: loaded on first user interaction (lazy loader at end of page) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -2546,7 +2540,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.8vw,50px);font-weight:300;line-height:1.15;color:#1e2530;margin:0 0 16px;">Get Your Roof Price<br><em>in 60 Seconds.</em></h2>
     <p style="font-size:16px;color:#6b7280;max-width:520px;margin:0 auto;font-weight:300;line-height:1.8;font-family:'Inter',sans-serif;">Enter your address below to see real pricing from IKO, GAF, and Malarkey. No pressure, no obligation.</p>
   </div>
-  <script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=BcZ84ee4Bj5-sAtZot4pJ" async></script>
+  <div id="roofle-embed-slot" style="min-height:420px;"><!-- Roofle widget loads here on first interaction --></div>
 </section>
 
 <!-- INTRO -->
@@ -3493,6 +3487,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       btn.setAttribute('aria-expanded', 'false');
     });
   });
+})();
+</script>
+<script>
+/* Roofle lazy loader. The two Roofle widgets total roughly 2MB of JavaScript,
+   which was making the page take ~19s to become interactive on mobile. They
+   now load on the visitor's first real interaction (touch, mouse, wheel, key),
+   or immediately when the page is opened at #roofle-quote. Every real visitor
+   interacts within the first moments, so behaviour is effectively unchanged. */
+(function(){
+  var ROOFLE_ID = 'BcZ84ee4Bj5-sAtZot4pJ';
+  var loaded = false;
+  function loadRoofle(){
+    if (loaded) return; loaded = true;
+    var slot = document.getElementById('roofle-embed-slot');
+    var e = document.createElement('script');
+    e.src = 'https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=' + ROOFLE_ID;
+    e.async = true; (slot || document.body).appendChild(e);
+    var t = document.createElement('script');
+    t.src = 'https://app.roofle.com/roof-quote-pro-widget.js?id=' + ROOFLE_ID;
+    t.async = true; document.body.appendChild(t);
+    evs.forEach(function(ev){ window.removeEventListener(ev, loadRoofle); });
+  }
+  var evs = ['touchstart','pointerdown','mousemove','wheel','keydown'];
+  evs.forEach(function(ev){ window.addEventListener(ev, loadRoofle, { passive: true }); });
+  if (location.hash === '#roofle-quote') loadRoofle();
 })();
 </script>
 </body>
