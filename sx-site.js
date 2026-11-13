@@ -145,3 +145,20 @@
     el.insertAdjacentElement('afterend', b);
   });
 })();
+
+/* ---- Menu: mark the page you are on ---- */
+(function () {
+  var nav = document.querySelector('nav.sxn');
+  if (!nav) return;
+  var here = location.pathname.replace(/index\.html$/, '').replace(/\/$/, '') || '/';
+  nav.querySelectorAll('.sxn-menu a[href]').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (!href || href.charAt(0) !== '/' || href.indexOf('#') !== -1) return;
+    var p = href.replace(/\/$/, '') || '/';
+    if (p !== here && p !== here + '.html' && p + '.html' !== here) return;
+    a.classList.add('sxn-current');
+    a.setAttribute('aria-current', 'page');
+    var group = a.closest('.sxn-has');
+    if (group) { var top = group.querySelector('.sxn-top'); if (top) top.classList.add('sxn-current'); }
+  });
+})();

@@ -193,6 +193,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </style>
 <style id="sxn-css">
+nav.sxn .sxn-top.sxn-current{color:#a0793d !important}@media (min-width:1181px){nav.sxn .sxn-list>li>.sxn-top.sxn-current{box-shadow:inset 0 -2px 0 #a0793d}}nav.sxn .sxn-panel a.sxn-current{color:#a0793d !important;font-weight:500}
 #quick-quote-callout{display:none !important}@media (max-width:768px){.sx-clamp{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}.sx-clamp.sx-open{display:block;-webkit-line-clamp:unset;overflow:visible}.sx-more{display:block;margin:6px 0 10px;padding:6px 0;background:none;border:0;color:#a0793d;font:500 13px 'Inter',system-ui,sans-serif;letter-spacing:.04em;cursor:pointer}}@media (min-width:769px){.sx-more{display:none}}
 nav.sxn{background:#fff !important;border-bottom:1px solid #ddd7cc !important;box-shadow:0 2px 20px rgba(0,0,0,.06) !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:28px;font-family:'Inter',system-ui,-apple-system,sans-serif}
 nav.sxn.sxn-rel{position:relative}
@@ -261,6 +262,28 @@ nav.sxn .sxn-logo img{height:30px}
 @supports (overflow:clip){@media (max-width:900px){html.sxn-clip,html.sxn-clip body{overflow-x:clip !important}}}
 </style>
 <style id="ux-hero">@media (min-width:769px){.hero:has(.hero-trust-row){display:flex !important;flex-direction:column !important;align-items:stretch !important;height:auto !important;min-height:max(100vh,720px) !important}.hero:has(.hero-trust-row) .hero-content{padding-bottom:56px !important;flex:0 0 auto}.hero .hero-trust-row{position:relative !important;bottom:auto !important;left:auto !important;right:auto !important;width:100%;box-sizing:border-box;margin-top:auto !important}.hero .hero-trust-inner{height:auto !important;min-height:80px}.hero .hero-trust-inner .trust-badge{padding-top:14px;padding-bottom:14px}}</style>
+<style id="sxf-css">
+footer.sxf{background:#16202a !important;border-top:1px solid rgba(184,150,90,.15);padding:72px 0 0 !important;margin:0;font-family:'Inter',system-ui,-apple-system,sans-serif;color:rgba(255,255,255,.58);text-align:left}
+footer.sxf *{box-sizing:border-box}
+.sxf-in{max-width:1200px;margin:0 auto;padding:0 48px}
+.sxf-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.1fr;gap:44px;margin-bottom:52px}
+.sxf-word{display:inline-block;font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.92) !important;margin-bottom:18px;line-height:1}
+.sxf-brand p{font-size:15px;line-height:1.8;color:rgba(255,255,255,.55);font-weight:300;max-width:290px;margin:0}
+.sxf-t{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:#a0793d;margin:0 0 18px;font-weight:500}
+.sxf ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
+.sxf li{margin:0;padding:0;font-size:15px;line-height:1.5;font-weight:300;color:rgba(255,255,255,.58)}
+.sxf a{color:rgba(255,255,255,.62);text-decoration:none;transition:color .25s;font-weight:300}
+.sxf a:hover{color:#c49a58}
+.sxf-cta{display:inline-block;margin-top:6px;padding:11px 18px;background:#a0793d;color:#fff !important;font-weight:500 !important;font-size:14px;border-radius:3px;letter-spacing:.02em}
+.sxf-cta:hover{background:#c49a58}
+.sxf-bottom{border-top:1px solid rgba(255,255,255,.07);padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.sxf-bottom p{font-size:13px;color:rgba(255,255,255,.38);margin:0}
+.sxf-bottom div{display:flex;gap:22px}.sxf-bottom a{font-size:13px;color:rgba(255,255,255,.38)}
+.sxf-legal{max-width:78ch;margin:8px auto 0;padding:20px 24px 36px;border-top:1px solid rgba(148,152,160,.22);font-size:12.5px;line-height:1.65;color:rgba(255,255,255,.5)}
+.sxf-legal p{margin:0 0 10px;color:inherit;font-size:inherit}.sxf-legal a{color:rgba(255,255,255,.6);text-decoration:underline}.sxf-legal strong{color:rgba(255,255,255,.7);font-weight:500}
+@media (max-width:1000px){.sxf-grid{grid-template-columns:1fr 1fr 1fr;gap:36px}.sxf-brand{grid-column:1 / -1}}
+@media (max-width:640px){footer.sxf{padding-top:52px !important;padding-bottom:70px !important}.sxf-in{padding:0 22px}.sxf-grid{grid-template-columns:1fr 1fr;gap:32px 20px;margin-bottom:38px}.sxf-contact{grid-column:1 / -1}.sxf-bottom{flex-direction:column;align-items:flex-start}}
+</style>
 </head>
 <body>
 
@@ -456,58 +479,72 @@ nav.sxn .sxn-logo img{height:30px}
   </div>
 </section>
 <!-- /sx-lead -->
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="/" class="nav-logo"><span class="nav-logo-text" style="color:rgba(255,255,255,0.9);">Stonnex</span></a>
-        <p>Insured roofing contractor serving homeowners across the Lower Mainland. WorkSafeBC registered, fully insured, written warranties on every project.</p>
+<footer class="sxf">
+  <div class="sxf-in">
+    <div class="sxf-grid">
+      <div class="sxf-brand">
+        <a href="/" class="sxf-word" aria-label="Stonnex Roofing home">Stonnex</a>
+        <p>GAF certified roofing for homeowners across the Lower Mainland. WorkSafeBC registered, fully insured, BC incorporated. Written warranties on every project.</p>
       </div>
       <div>
-        <div class="footer-col-title">Services</div>
-        <ul class="footer-links">
+        <p class="sxf-t">Services</p>
+        <ul>
           <li><a href="/roof-replacement">Roof Replacement</a></li>
-          <li><a href="/roof-repairs/">Roof Repairs</a></li>
-          <li><a href="/flat-roofing/">Flat &amp; Torch-On</a></li>
-          <li><a href="/strata-roofing/">Strata &amp; Multi-Family</a></li>
+          <li><a href="/reroofing/">Reroofing</a></li>
+          <li><a href="/roof-repairs/">Roof Repair</a></li>
+          <li><a href="/roof-leak-repair/">Leak Repair</a></li>
           <li><a href="/roof-inspections/">Roof Inspections</a></li>
-          <li><a href="/gutters">Gutters</a></li>
+          <li><a href="/flat-roofing/">Flat &amp; Torch-On</a></li>
+          <li><a href="/brava-cedar-shake">Brava Cedar Shake</a></li>
+          <li><a href="/metal-roofing-bc.html">Metal Roofing</a></li>
+          <li><a href="/strata-roofing/">Strata &amp; Multi-Family</a></li>
+          <li><a href="/gutters">Gutters &amp; Drainage</a></li>
           <li><a href="/skylights/">Skylights</a></li>
-          <li><a href="/roof-leak-repair/">Leak &amp; Emergency Repair</a></li>
-          <li><a href="/torch-on-roofing/">Torch-On Roofing</a></li>
-          <li><a href="/cedar-roof-replacement/">Cedar Roof Replacement</a></li>
-          <li><a href="/roof-replacement-cost/">Roof Replacement Cost</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Popular Areas</div>
-        <ul class="footer-links">
+        <p class="sxf-t">Service Areas</p>
+        <ul>
           <li><a href="/vancouver-roofing.html">Vancouver</a></li>
-          <li><a href="/surrey-roofing.html">Surrey</a></li>
-          <li><a href="/burnaby-roofing.html">Burnaby</a></li>
-          <li><a href="/langley-roofing.html">Langley</a></li>
+          <li><a href="/north-vancouver-roofing.html">North Vancouver</a></li>
+          <li><a href="/reroofing-burnaby/">Burnaby</a></li>
+          <li><a href="/reroofing-coquitlam/">Coquitlam</a></li>
           <li><a href="/richmond-roofing.html">Richmond</a></li>
+          <li><a href="/surrey-roofing.html">Surrey</a></li>
+          <li><a href="/langley-roofing.html">Langley</a></li>
+          <li><a href="/abbotsford-roofing.html">Abbotsford</a></li>
+          <li><a href="/service-areas/">All service areas</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Contact</div>
-        <ul class="footer-links">
-          <li><a href="tel:16049356976">+1-604-935-6976</a></li>
+        <p class="sxf-t">Company</p>
+        <ul>
+          <li><a href="/portfolio/">Our Work</a></li>
+          <li><a href="/#testimonials">Reviews</a></li>
+          <li><a href="/#credentials">Why Stonnex</a></li>
+          <li><a href="/#process">Our Process</a></li>
+          <li><a href="/warranty/">Warranty</a></li>
+          <li><a href="/gaf-certified/">GAF Certified</a></li>
+          <li><a href="/roof-replacement-cost/">Roof Replacement Cost</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="sxf-contact">
+        <p class="sxf-t">Contact</p>
+        <ul>
+          <li><a href="tel:+16049356976">604-935-6976</a></li>
           <li><a href="mailto:info@stonnex.com">info@stonnex.com</a></li>
           <li>21787 Maxwell Cres<br>Langley, BC V2Y 2P9</li>
-          <li><a href="/blog/">All Articles</a></li>
+          <li><a class="sxf-cta" href="#sx-lead">Book a Free Inspection</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="sxf-bottom">
       <p>&copy; 2026 Stonnex Construction Ltd. All rights reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a>
-      </div>
+      <div><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a></div>
     </div>
   </div>
-<div class="footer-legal">
-  <p>
+  <div class="sxf-legal"><p>
     Stonnex Roofing is a trade name of <strong>Stonnex Construction Ltd.</strong>,
     incorporated in British Columbia. Work may be carried out by Stonnex
     installation teams or by independent partner contractors. In every case the
@@ -520,8 +557,7 @@ nav.sxn .sxn-logo img{height:30px}
     change. No estimate produced by this website constitutes a binding quote.
     See our <a href="/terms-of-service/">Terms of Service</a> and
     <a href="/privacy-policy/">Privacy Policy</a>.
-  </p>
-</div>
+  </p></div>
 </footer>
 
 <!-- stonnex-sticky-cta -->
@@ -541,9 +577,9 @@ nav.sxn .sxn-logo img{height:30px}
 </style>
 <div class="sx-sticky-bar">
   <div class="sx-sticky-inner">
-    <a href="/what-will-my-roof-cost/" class="sx-sticky-btn quote">
+    <a href="#sx-lead" class="sx-sticky-btn quote">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-      Free Estimate
+       Free Inspection
     </a>
     <a href="tel:16049356976" class="sx-sticky-btn call">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.72 3.4 2 2 0 0 1 3.69 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
