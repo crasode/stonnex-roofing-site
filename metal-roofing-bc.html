@@ -228,6 +228,110 @@ footer a{color:rgba(255,255,255,.55)}footer strong{color:#fff}
   body:has(.mobile-sticky-bar) .sticky-cta > *:not(.sticky-quote){display:none !important}
 .hero-trust-inner .trust-badge:nth-child(4){display:flex !important}.sticky-cta{transition:opacity .2s}body.ux-form-in-view .sticky-cta{opacity:0 !important;pointer-events:none !important}}
 </style>
+<style id="sxl-css">
+.sxl{background:#1e2530;color:#fff;padding:88px 24px;font-family:'Inter',system-ui,-apple-system,sans-serif}
+.sxl *{box-sizing:border-box}
+.sxl-in{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.sxl-eyebrow{display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#c49a58;font-weight:500;margin-bottom:18px}
+.sxl-eyebrow::before{content:'';width:36px;height:1px;background:#c49a58}
+.sxl h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:44px;line-height:1.1;color:#fff;margin:0 0 18px;letter-spacing:0}
+.sxl h2 em{font-style:italic;color:#c49a58}
+.sxl-lede{font-size:16px;line-height:1.7;color:rgba(255,255,255,.78);margin:0 0 26px;max-width:440px}
+.sxl-proof{list-style:none;margin:0 0 26px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;max-width:440px}
+.sxl-proof li{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(255,255,255,.86);margin:0;padding:0}
+.sxl-proof li::before{content:'';width:6px;height:6px;border-radius:50%;background:#c49a58;flex-shrink:0}
+.sxl-rating{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid rgba(255,255,255,.22);border-radius:3px;background:rgba(0,0,0,.22);color:#fff;text-decoration:none;font-size:14px}
+.sxl-rating b{font-weight:600}
+.sxl-stars{color:#e0b565;letter-spacing:2px;font-size:14px}
+.sxl-form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:30px 30px 32px}
+.sxl-label{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#c49a58;font-weight:500;margin-bottom:18px}
+.sxl-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.sxl-input{width:100%;padding:14px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);color:#fff;font-family:inherit;font-size:16px;outline:none;border-radius:2px;margin:0 0 12px;transition:border-color .25s;-webkit-appearance:none;appearance:none}
+.sxl-row .sxl-input{margin:0}
+.sxl-input::placeholder{color:rgba(255,255,255,.5)}
+.sxl-input:focus{border-color:#c49a58}
+.sxl-btn{width:100%;padding:16px;background:#a0793d;color:#fff;border:0;font-family:inherit;font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:background .25s}
+.sxl-btn:hover{background:#c49a58}
+.sxl-btn:disabled{opacity:.7;cursor:default}
+.sxl-note{margin:14px 0 0;font-size:13px;color:rgba(255,255,255,.6);line-height:1.5}
+.sxl-note a{color:#c49a58;text-decoration:none;white-space:nowrap}
+.sxl-error{margin:12px 0 0;font-size:13.5px;color:#ffd9a8}
+@media (max-width:860px){
+.sxl{padding:60px 20px 64px}
+.sxl-in{grid-template-columns:1fr;gap:34px}
+.sxl h2{font-size:34px}
+.sxl-row{grid-template-columns:1fr}
+.sxl-form{padding:22px 18px 24px}
+}
+</style>
+<style id="sxn-css">
+#quick-quote-callout{display:none !important}@media (max-width:768px){.sx-clamp{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}.sx-clamp.sx-open{display:block;-webkit-line-clamp:unset;overflow:visible}.sx-more{display:block;margin:6px 0 10px;padding:6px 0;background:none;border:0;color:#a0793d;font:500 13px 'Inter',system-ui,sans-serif;letter-spacing:.04em;cursor:pointer}}@media (min-width:769px){.sx-more{display:none}}
+nav.sxn{background:#fff !important;border-bottom:1px solid #ddd7cc !important;box-shadow:0 2px 20px rgba(0,0,0,.06) !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:28px;font-family:'Inter',system-ui,-apple-system,sans-serif}
+nav.sxn.sxn-rel{position:relative}
+nav.sxn a,nav.sxn button{font-family:inherit;text-transform:none;letter-spacing:.01em;margin:0;-webkit-tap-highlight-color:transparent}
+nav.sxn .sxn-logo{display:flex;align-items:center;flex-shrink:0;padding:0;border:0;background:none}
+nav.sxn .sxn-logo img{height:36px;width:auto;display:block}
+nav.sxn .sxn-list{list-style:none;margin:0;padding:0}
+nav.sxn .sxn-list>li{margin:0;padding:0;width:auto}
+nav.sxn .sxn-top{font-size:15px;font-weight:400;color:#4a4a4a;background:none;border:0;cursor:pointer;text-decoration:none;line-height:1.2}
+nav.sxn .sxn-panel a{display:block;color:#4a4a4a;text-decoration:none;font-weight:400;border:0;background:none}
+nav.sxn .sxn-h{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#a0793d}
+nav.sxn .sxn-phone{display:flex;align-items:center;gap:8px;color:#1e2530;font-size:15px;font-weight:500;text-decoration:none;white-space:nowrap;background:none}
+nav.sxn .sxn-phone svg{color:#a0793d;flex-shrink:0}
+nav.sxn .sxn-cta{background:#a0793d;color:#fff;font-size:14px;font-weight:500;letter-spacing:.03em;text-decoration:none;white-space:nowrap;border-radius:3px;transition:background .25s}
+nav.sxn .sxn-cta:hover{background:#1e2530;color:#fff}
+form,#sx-lead{scroll-margin-top:110px}
+@media (min-width:1181px){
+nav.sxn .sxn-burger{display:none}
+nav.sxn .sxn-menu{display:flex;align-items:center;justify-content:flex-end;gap:34px;flex:1;min-width:0}
+nav.sxn .sxn-list{display:flex;align-items:center;gap:32px}
+nav.sxn .sxn-list>li{position:relative}
+nav.sxn .sxn-top{display:flex;align-items:center;gap:7px;padding:14px 0;transition:color .25s;white-space:nowrap}
+nav.sxn .sxn-top:hover,nav.sxn .sxn-has:hover>.sxn-top,nav.sxn .sxn-has.open>.sxn-top{color:#a0793d}
+nav.sxn .sxn-has>.sxn-top::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+nav.sxn .sxn-has:hover>.sxn-top::after,nav.sxn .sxn-has.open>.sxn-top::after{transform:rotate(225deg) translateY(-1px)}
+nav.sxn .sxn-panel{display:none;position:absolute;top:100%;left:-30px;background:#fff;border:1px solid #ddd7cc;border-radius:3px;box-shadow:0 14px 44px rgba(0,0,0,.11);padding:22px 14px 16px;z-index:300}
+nav.sxn .sxn-has:hover>.sxn-panel,nav.sxn .sxn-has.open>.sxn-panel,nav.sxn .sxn-has:focus-within>.sxn-panel{display:grid}
+nav.sxn .sxn-mega{grid-template-columns:repeat(3,auto);gap:0 10px}
+nav.sxn .sxn-two{grid-template-columns:1fr 1fr;min-width:340px;padding-top:14px}
+nav.sxn .sxn-one{grid-template-columns:1fr;min-width:200px;padding-top:14px}
+nav.sxn .sxn-h{padding:0 16px 10px}
+nav.sxn .sxn-panel a{padding:9px 16px;font-size:14px;white-space:nowrap;border-radius:2px;transition:background .2s,color .2s}
+nav.sxn .sxn-panel a:hover{background:#faf7f2;color:#a0793d}
+nav.sxn .sxn-all{grid-column:1 / -1;margin-top:8px;padding-top:14px !important;border-top:1px solid #ece6da !important;border-radius:0 !important;color:#a0793d !important}
+nav.sxn .sxn-actions{display:flex;align-items:center;gap:22px;flex-shrink:0}
+nav.sxn .sxn-cta{padding:13px 24px}
+}
+@media (min-width:1181px) and (max-width:1340px){
+nav.sxn .sxn-menu{gap:22px}nav.sxn .sxn-list{gap:22px}nav.sxn .sxn-actions{gap:16px}nav.sxn .sxn-cta{padding:12px 18px}
+}
+@media (max-width:1180px){
+nav.sxn{padding-left:20px !important;padding-right:14px !important}
+nav.sxn .sxn-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:48px;height:48px;padding:0 12px;margin-left:auto;background:none;border:0;cursor:pointer}
+nav.sxn .sxn-burger span{display:block;width:24px;height:2px;background:#1a1a1a;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+nav.sxn.open .sxn-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+nav.sxn.open .sxn-burger span:nth-child(2){opacity:0}
+nav.sxn.open .sxn-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+nav.sxn .sxn-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #ece6da;box-shadow:0 18px 34px rgba(0,0,0,.16);max-height:calc(100vh - 150px);max-height:calc(100dvh - 150px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:0 0 18px;z-index:1000}
+nav.sxn.open .sxn-menu{display:block}
+nav.sxn .sxn-top{display:flex;align-items:center;justify-content:space-between;width:100%;padding:17px 22px;font-size:17px;color:#1a1a1a;text-align:left;border-bottom:1px solid #f1ede5;box-sizing:border-box}
+nav.sxn .sxn-has>.sxn-top::after{content:'';width:8px;height:8px;border-right:1.5px solid #a0793d;border-bottom:1.5px solid #a0793d;transform:rotate(45deg);transition:transform .2s;margin-right:6px}
+nav.sxn .sxn-has.open>.sxn-top::after{transform:rotate(225deg)}
+nav.sxn .sxn-panel{display:none;background:#faf7f2;padding:6px 0 14px;border-bottom:1px solid #f1ede5}
+nav.sxn .sxn-has.open>.sxn-panel{display:block}
+nav.sxn .sxn-h{padding:14px 30px 4px}
+nav.sxn .sxn-panel a{padding:11px 30px;font-size:15.5px}
+nav.sxn .sxn-all{color:#a0793d !important}
+nav.sxn .sxn-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:18px 20px 0}
+nav.sxn .sxn-phone,nav.sxn .sxn-cta{justify-content:center;text-align:center;padding:15px 8px;border-radius:3px;font-size:15px}
+nav.sxn .sxn-phone{border:1px solid #1e2530}
+}
+@media (max-width:900px){
+nav.sxn.sxn-stick{position:-webkit-sticky !important;position:sticky !important;top:0 !important;height:64px !important}
+nav.sxn .sxn-logo img{height:30px}
+}
+@supports (overflow:clip){@media (max-width:900px){html.sxn-clip,html.sxn-clip body{overflow-x:clip !important}}}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -236,15 +340,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 
-<nav class="nav">
-  <div class="nav-logo">STONNEX</div>
-  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/#services">Services</a></li>
-    <li><a href="/service-areas/">Service Areas</a></li>
-    <li><a href="/#contact" class="nav-cta">Free Inspection</a></li>
-  </ul>
+<nav class="nav sxn" aria-label="Main">
+  <a href="/" class="sxn-logo" aria-label="Stonnex Roofing home"><img src="/logo-black.svg" alt="Stonnex Roofing" width="197" height="36"></a>
+  <button type="button" class="sxn-burger" aria-label="Open menu" aria-expanded="false" aria-controls="sxn-menu"><span></span><span></span><span></span></button>
+  <div class="sxn-menu" id="sxn-menu">
+    <ul class="sxn-list">
+      <li class="sxn-has">
+        <button type="button" class="sxn-top" aria-expanded="false">Services</button>
+        <div class="sxn-panel sxn-mega">
+          <div class="sxn-col">
+            <div class="sxn-h">Replacement</div>
+            <a href="/roof-replacement">Roof Replacement</a>
+            <a href="/reroofing/">Reroofing</a>
+            <a href="/brava-cedar-shake">Brava Cedar Shake</a>
+            <a href="/cedar-roof-replacement/">Cedar Roof Replacement</a>
+            <a href="/metal-roofing-bc.html">Metal Roofing</a>
+            <a href="/roof-replacement-cost/">Roof Replacement Cost</a>
+          </div>
+          <div class="sxn-col">
+            <div class="sxn-h">Repair &amp; Care</div>
+            <a href="/roof-repairs/">Roof Repair</a>
+            <a href="/roof-leak-repair/">Leak Repair</a>
+            <a href="/emergency-roof-repair/">Emergency Repair</a>
+            <a href="/roof-inspections/">Roof Inspections</a>
+            <a href="/gutters">Gutters &amp; Drainage</a>
+            <a href="/skylights/">Skylights</a>
+          </div>
+          <div class="sxn-col">
+            <div class="sxn-h">Flat &amp; Strata</div>
+            <a href="/flat-roofing/">Flat Roofing</a>
+            <a href="/torch-on-roofing/">Torch-On Roofing</a>
+            <a href="/strata-roofing/">Strata &amp; Multi-Family</a>
+            <a href="/residential-roofing/">Residential Roofing</a>
+          </div>
+        </div>
+      </li>
+      <li class="sxn-has">
+        <button type="button" class="sxn-top" aria-expanded="false">Service Areas</button>
+        <div class="sxn-panel sxn-two">
+          <a href="/reroofing-vancouver/">Vancouver</a>
+          <a href="/reroofing-north-vancouver/">North Vancouver</a>
+          <a href="/reroofing-burnaby/">Burnaby</a>
+          <a href="/reroofing-coquitlam/">Coquitlam</a>
+          <a href="/reroofing-richmond/">Richmond</a>
+          <a href="/reroofing-surrey/">Surrey</a>
+          <a href="/reroofing-langley/">Langley</a>
+          <a href="/reroofing-abbotsford/">Abbotsford</a>
+          <a href="/service-areas/" class="sxn-all">All service areas &rarr;</a>
+        </div>
+      </li>
+      <li><a class="sxn-top" href="/portfolio/">Our Work</a></li>
+      <li><a class="sxn-top" href="/#testimonials">Reviews</a></li>
+      <li class="sxn-has">
+        <button type="button" class="sxn-top" aria-expanded="false">About</button>
+        <div class="sxn-panel sxn-one">
+          <a href="/#credentials">Why Stonnex</a>
+          <a href="/#process">Our Process</a>
+          <a href="/warranty/">Warranty</a>
+          <a href="/gaf-certified/">GAF Certified</a>
+          <a href="/blog/">Blog</a>
+        </div>
+      </li>
+    </ul>
+    <div class="sxn-actions">
+      <a class="sxn-phone" href="tel:+16049356976"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>604-935-6976</span></a>
+      <a class="sxn-cta" href="#sx-lead">Free Inspection</a>
+    </div>
+  </div>
 </nav>
 
 <section class="hero">
@@ -252,7 +414,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h1>Metal Roofing<br><em>Vancouver &amp; Lower Mainland</em></h1>
   <p class="hero-sub">Standing seam, metal tile, and steel panel systems installed by installation teams across BC.</p>
   <p class="hero-body">Metal roofing is the highest-durability option available for BC homes. One installation. Decades of performance. Fixed-price quotes with no surprises.</p>
-  <a href="/#contact" class="btn-primary">Book Your Free Consultation</a>
+  <a href="#sx-lead" class="btn-primary">Book Your Free Consultation</a>
   <a href="/" class="btn-outline">All Roofing Services</a>
 </section>
 
@@ -374,7 +536,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta-section">
   <h2>Get a Free Metal Roofing<br><em>Consultation in BC</em></h2>
   <p>A Stonnex specialist will assess your home, review your material options, and provide a written fixed-price quote. No obligation, no pressure.</p>
-  <a href="/#contact" class="btn-primary">Book Your Free Consultation</a>
+  <a href="#sx-lead" class="btn-primary">Book Your Free Consultation</a>
   <a href="/" class="btn-outline">See All Services</a>
 </section>
 
@@ -413,10 +575,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- sx-lead -->
+<section class="sxl" id="sx-lead" aria-labelledby="sx-lead-h">
+  <div class="sxl-in">
+    <div class="sxl-copy">
+      <span class="sxl-eyebrow">Free Roof Inspection</span>
+      <h2 id="sx-lead-h">Book Your <em>Free Inspection</em></h2>
+      <p class="sxl-lede">No obligation. A written, fixed-price quote. We respond within one business day.</p>
+      <ul class="sxl-proof">
+        <li>WorkSafeBC Registered</li>
+        <li>$5M Liability Insurance</li>
+        <li>GAF Certified</li>
+        <li>Written Labour Warranty</li>
+      </ul>
+      <a class="sxl-rating" href="https://maps.app.goo.gl/uiN3ZuHL9AWtzkpC8" target="_blank" rel="noopener"><span class="sxl-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span><b>5.0</b> rated on Google</span></a>
+    </div>
+    <form class="sxl-form sx-lead-form" action="https://formspree.io/f/meenyezn" method="POST">
+      <span class="sxl-label">Get your free inspection &mdash; takes 30 seconds</span>
+      <input type="hidden" name="_subject" value="Metal Roofing Vancouver &amp; Lower Mainland - Website Lead - Stonnex.com">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="service_interest" value="Metal Roofing Vancouver &amp; Lower Mainland">
+      <div class="sxl-row">
+        <input class="sxl-input" type="text" name="name" required placeholder="Your Name" aria-label="Your Name" autocomplete="name">
+        <input class="sxl-input" type="tel" name="phone" required placeholder="Phone Number" aria-label="Phone Number" autocomplete="tel">
+      </div>
+      <input class="sxl-input" type="email" name="email" placeholder="Email Address (optional)" aria-label="Email Address" autocomplete="email">
+      <input class="sxl-input" type="text" name="address" required placeholder="Property Address (e.g. 123 Main St, Surrey)" aria-label="Property Address" autocomplete="street-address">
+      <button type="submit" class="sxl-btn">Book My Free Inspection</button>
+      <p class="sxl-error" hidden>Something went wrong. Please try again or call <a href="tel:+16049356976">604-935-6976</a>.</p>
+      <p class="sxl-note">Prefer to talk? Call <a href="tel:+16049356976">604-935-6976</a>.</p>
+    </form>
+  </div>
+</section>
+<!-- /sx-lead -->
 <footer>
   <p><strong>Stonnex Roofing</strong> &nbsp;|&nbsp; Metal Roofing Contractor &mdash; Vancouver &amp; Lower Mainland BC &nbsp;|&nbsp; WorkSafeBC Registered &nbsp;|&nbsp; $5M Insured</p>
   <p style="margin-top:10px"><strong>Stonnex Construction Ltd.</strong> &nbsp;|&nbsp; 21787 Maxwell Cres, Langley, BC V2Y 2P9 &nbsp;|&nbsp; <a href="tel:16049356976">604-935-6976</a> &nbsp;|&nbsp; <a href="mailto:info@stonnex.com">info@stonnex.com</a></p>
-  <p style="margin-top:10px"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/#services">Services</a> &nbsp;&middot;&nbsp; <a href="/#areas">Service Areas</a> &nbsp;&middot;&nbsp; <a href="/warranty/">Our Warranty</a> &nbsp;&middot;&nbsp; <a href="/gaf-certified/">GAF Certified</a> &nbsp;&middot;&nbsp; <a href="/#contact">Free Inspection</a></p>
+  <p style="margin-top:10px"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/#services">Services</a> &nbsp;&middot;&nbsp; <a href="/#areas">Service Areas</a> &nbsp;&middot;&nbsp; <a href="/warranty/">Our Warranty</a> &nbsp;&middot;&nbsp; <a href="/gaf-certified/">GAF Certified</a> &nbsp;&middot;&nbsp; <a href="#sx-lead">Free Inspection</a></p>
   <p style="margin-top:16px;font-size:12px">Copyright &copy; 2026 Stonnex Construction Ltd. All rights reserved. | <a href="/sitemap.xml">Sitemap</a></p>
 <div class="footer-legal">
   <p>
@@ -492,5 +687,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <!-- /stonnex-sticky-cta -->
 <script id="ux-form-watch">(function(){if(!('IntersectionObserver' in window)||window.innerWidth>768)return;var f=document.querySelector('.hero form');if(!f)return;new IntersectionObserver(function(e){document.body.classList.toggle('ux-form-in-view',e[0].isIntersecting)},{threshold:0.05}).observe(f)})();</script>
+<script src="/sx-site.js" defer></script>
 </body>
 </html>
