@@ -162,3 +162,52 @@
     if (group) { var top = group.querySelector('.sxn-top'); if (top) top.classList.add('sxn-current'); }
   });
 })();
+
+/* ---- Instant quote: offer a booking time once the visitor has their price ----
+   The Roofle quote tool reports its steps to this page. When it reports that the
+   visitor has submitted their details, show a small card linking to the booking page. */
+(function () {
+  var BOOK = 'https://book.stonnexcrm.com/?src=instant-quote';
+  var shown = false;
+  function track(name) { try { (window.dataLayer = window.dataLayer || []).push({ event: name, booking_source: 'instant_quote' }); } catch (e) {} }
+  function show() {
+    if (shown || document.getElementById('sxq')) return;
+    shown = true;
+    var css = document.createElement('style');
+    css.textContent = '#sxq{position:fixed;left:20px;bottom:20px;z-index:2147483600;width:360px;max-width:calc(100vw - 28px);background:#1e2530;color:#fff;border:1px solid rgba(196,154,88,.45);border-radius:4px;box-shadow:0 18px 50px rgba(0,0,0,.35);padding:22px 22px 20px;font-family:Inter,system-ui,-apple-system,sans-serif;transform:translateY(16px);opacity:0;transition:opacity .35s,transform .35s}' +
+      '#sxq.in{opacity:1;transform:none}' +
+      '#sxq .sxq-e{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#c49a58;font-weight:500;margin:0 0 8px}' +
+      '#sxq .sxq-h{font-family:"Cormorant Garamond",Georgia,serif;font-size:26px;line-height:1.15;font-weight:400;margin:0 0 10px;color:#fff}' +
+      '#sxq .sxq-p{font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.78);margin:0 0 16px}' +
+      '#sxq .sxq-b{display:block;text-align:center;background:#a0793d;color:#fff;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:14px 12px;border-radius:3px}' +
+      '#sxq .sxq-b:hover{background:#c49a58}' +
+      '#sxq .sxq-x{position:absolute;top:6px;right:8px;width:36px;height:36px;background:none;border:0;color:rgba(255,255,255,.6);font-size:22px;line-height:1;cursor:pointer}' +
+      '#sxq .sxq-n{display:block;margin:12px auto 0;background:none;border:0;color:rgba(255,255,255,.6);font:inherit;font-size:13px;cursor:pointer;text-decoration:underline}' +
+      '@media (max-width:768px){#sxq{left:14px;right:14px;width:auto;bottom:76px;padding:18px 18px 16px}#sxq .sxq-h{font-size:23px}}';
+    document.head.appendChild(css);
+    var d = document.createElement('div');
+    d.id = 'sxq'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', 'Book a roof inspection');
+    d.innerHTML = '<button type="button" class="sxq-x" aria-label="Close">&times;</button>' +
+      '<p class="sxq-e">Next step</p>' +
+      '<p class="sxq-h">Get a firm written price</p>' +
+      '<p class="sxq-p">Your estimate is a starting point. Book a free 20 to 30 minute inspection and we will measure the roof and confirm the price in writing.</p>' +
+      '<a class="sxq-b" href="' + BOOK + '" target="_blank" rel="noopener">Choose a Time</a>' +
+      '<button type="button" class="sxq-n">Not now</button>';
+    document.body.appendChild(d);
+    var close = function () { d.classList.remove('in'); setTimeout(function () { d.remove(); }, 400); };
+    d.querySelector('.sxq-x').addEventListener('click', close);
+    d.querySelector('.sxq-n').addEventListener('click', close);
+    d.querySelector('.sxq-b').addEventListener('click', function () { track('sx_booking_click'); });
+    requestAnimationFrame(function () { requestAnimationFrame(function () { d.classList.add('in'); }); });
+    track('sx_booking_prompt_shown');
+  }
+  window.addEventListener('message', function (e) {
+    if (!e.origin || e.origin.indexOf('app.roofle.com') === -1) return;
+    var data = e.data;
+    if (typeof data === 'string') { try { data = JSON.parse(data); } catch (x) { return; } }
+    if (!data || !data.event) return;
+    if (data.event === 'Contact-form-submitted') setTimeout(show, 12000);
+    if (data.event === 'Product-requested-cta') setTimeout(show, 1500);
+  });
+  if (/[?&]sxq-preview=1/.test(location.search)) setTimeout(show, 600);
+})();
